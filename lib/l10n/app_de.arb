@@ -1,0 +1,182 @@
+{
+  "@@locale": "de",
+  "appName": "Bizoot",
+  "dashboard": "Dashboard",
+  "calendar": "Kalender",
+  "subscriptions": "Abonnements",
+  "reports": "Berichte",
+  "settings": "Einstellungen",
+  "premium": "Premium",
+  "authWelcomeBack": "Willkommen zurück",
+  "authCreateAccount": "Erstelle dein Bizoot-Konto",
+  "authWelcomeSubtitle": "Melde dich an, um zu sehen, was deine Fixkosten wirklich mit deinem Monat machen.",
+  "authCreateSubtitle": "Erstelle dein Konto und bringe jede wiederkehrende Zahlung in ein Premium-Kontrollzentrum.",
+  "authHero": "Verschwende kein Geld mehr für vergessene Abonnements.",
+  "email": "E-Mail",
+  "password": "Passwort",
+  "logIn": "Anmelden",
+  "createAccount": "Konto erstellen",
+  "enterEmailPassword": "Gib sowohl deine E-Mail als auch dein Passwort ein, um fortzufahren.",
+  "alreadyHaveAccount": "Du hast bereits ein Konto? Anmelden",
+  "needAccount": "Du brauchst ein Konto? Registrieren",
+  "onboardingStep": "Schritt {current} von {total}",
+  "@onboardingStep": {
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "back": "Zurück",
+  "continueLabel": "Weiter",
+  "finishSetup": "Einrichtung abschließen",
+  "finishingSetup": "Einrichtung wird abgeschlossen...",
+  "fullNameAndCountryRequired": "Vollständiger Name und Land sind erforderlich.",
+  "validCountryRequired": "Bitte wähle ein gültiges Land aus der Liste.",
+  "profileSetup": "Profileinrichtung",
+  "profileSetupSubtitle": "Lass uns Bizoot personalisieren, bevor wir deine wiederkehrenden Ausgaben verfolgen.",
+  "tapChooseProfilePicture": "Tippe, um ein Profilbild auszuwählen",
+  "profilePictureSelected": "Profilbild ausgewählt",
+  "opensPhoneGallery": "Öffnet deine Handy-Galerie",
+  "fullName": "Vollständiger Name",
+  "phoneNumberOptional": "Telefonnummer (optional)",
+  "country": "Land",
+  "financialSetup": "Finanzeinrichtung",
+  "financialSetupSubtitle": "Wähle die Geldeinstellungen, die Bizoot für dein Dashboard, deine Insights und Erinnerungen verwenden soll.",
+  "currency": "Währung",
+  "currencyAutoSelected": "Wird automatisch basierend auf deinem gewählten Land ausgewählt.",
+  "monthlyIncome": "Monatliches Einkommen",
+  "monthlyIncomeHelper": "Optional, aber empfohlen für Health Score und sicher auszugeben.",
+  "mainFinancialGoal": "Wichtigstes Finanzziel",
+  "estimatedSubscriptions": "Geschätzte Abonnements",
+  "estimatedSubscriptionsLabel": "{count} Abonnements",
+  "@estimatedSubscriptionsLabel": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "goalSaveMoney": "Geld sparen",
+  "goalTrackBills": "Rechnungen verfolgen",
+  "goalAvoidSurpriseCharges": "Überraschende Gebühren vermeiden",
+  "goalCancelUnusedSubscriptions": "Ungenutzte Abonnements kündigen",
+  "settingsSyncing": "Deine neuesten Bizoot-Änderungen werden gespeichert...",
+  "settingsOffline": "Offline-Modus aktiv. Deine Änderungen bleiben sicher und werden fortgesetzt, sobald du wieder online bist.",
+  "settingsPendingChanges": "Einige aktuelle Änderungen werden noch gespeichert.",
+  "settingsReady": "Deine Konto-, Erinnerungs-, Datenschutz- und Support-Einstellungen findest du hier.",
+  "notifications": "Benachrichtigungen",
+  "language": "Sprache",
+  "languageDescription": "Wähle die Sprache, die Bizoot in der gesamten App verwenden soll.",
+  "languageEnglish": "English",
+  "languageDanish": "Dansk",
+  "languageGerman": "Deutsch",
+  "languageSpanish": "Español",
+  "languageUpdated": "Sprache aktualisiert.",
+  "notificationPreferencesUpdated": "Benachrichtigungseinstellungen aktualisiert.",
+  "notificationPreferencesFailed": "Wir konnten deine Benachrichtigungseinstellungen gerade nicht aktualisieren.",
+  "signOutQuestion": "Von Bizoot abmelden?",
+  "signOutBody": "Du kehrst zum Anmeldebildschirm zurück, und deine synchronisierten Kontodaten bleiben mit deinem Konto verknüpft.",
+  "staySignedIn": "Angemeldet bleiben",
+  "signOut": "Abmelden",
+  "openPhoneNotificationSettings": "Benachrichtigungseinstellungen des Telefons öffnen",
+  "paymentReminders": "Zahlungserinnerungen",
+  "paymentRemindersSubtitle": "Erinnerungen für aktive Abonnements, die morgen oder bald fällig sind.",
+  "weeklySummaries": "Wöchentliche Zusammenfassungen",
+  "weeklySummariesSubtitle": "Zusammenfassungen am Sonntagabend für Verlängerungen und Summen der nächsten Woche.",
+  "trialAlerts": "Testphasen-Warnungen",
+  "trialAlertsSubtitle": "Warnungen, bevor aus einer kostenlosen Testphase ein bezahltes Abonnement wird.",
+  "smartInsights": "Smart Insights",
+  "smartInsightsSubtitle": "Spartipps, Kündigungs-Follow-ups und Warnungen zu wiederkehrenden Ausgaben.",
+  "promotionalNotifications": "Werbliche Benachrichtigungen",
+  "promotionalNotificationsSubtitle": "Optionale Produktupdates, Launch-News und Funktionsankündigungen.",
+  "premiumRequiredSuffix": "{text} Premium erforderlich.",
+  "@premiumRequiredSuffix": {
+    "placeholders": {
+      "text": {}
+    }
+  },
+  "subscriptionPremium": "Abo & Premium",
+  "currentPlan": "Aktueller Plan",
+  "trialStatus": "Teststatus",
+  "subscriptionUsage": "Abo-Nutzung",
+  "whatHappensNow": "Was jetzt passiert",
+  "planPremium": "Premium",
+  "planTrial": "7-Tage-Testversion",
+  "planFree": "Kostenlos",
+  "premiumUnlocked": "Premium freigeschaltet",
+  "trialDaysRemaining": "{days} Tage verbleibend",
+  "@trialDaysRemaining": {
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+  "trialEnded": "Testphase beendet",
+  "subscriptionsTrackedUnlimited": "{count} Abonnements verfolgt • unbegrenzter Plan",
+  "@subscriptionsTrackedUnlimited": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "subscriptionsUsed": "{count} / {limit} Abonnements verwendet",
+  "@subscriptionsUsed": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "limit": {"type": "int"}
+    }
+  },
+  "premiumActiveDescription": "Du hast unbegrenztes Abo-Tracking und alle Premium-Funktionen freigeschaltet.",
+  "trialPremiumDescription": "Während der Testphase stehen dir alle Premium-Funktionen mit einem Limit von 5 Abonnements zur Verfügung.",
+  "freePlanDescription": "Du kannst in diesem Tarif bis zu {limit} aktive Abonnements verfolgen.",
+  "@freePlanDescription": {
+    "placeholders": {
+      "limit": {"type": "int"}
+    }
+  },
+  "limitReachedDescription": "Limit erreicht – Upgrade für unbegrenztes Tracking.",
+  "upgradeToPremium": "Auf Premium upgraden",
+  "premiumFeatureComparison": "Premium-Funktionsvergleich",
+  "premiumCompareFree": "Kostenlos: bis zu 5 aktive Abonnements, grundlegende Erinnerungen und Kern-Tracking",
+  "premiumCompareOne": "Premium: unbegrenzte Abonnements, erweiterte Berichte und Smart Insights",
+  "premiumCompareTwo": "Premium: bessere Kündigungs-Intelligenz, wöchentliche Zusammenfassungen und tiefere Insights",
+  "privacySecurity": "Datenschutz & Sicherheit",
+  "privacyAiSettings": "Datenschutz- & KI-Einstellungen",
+  "privacyAiSubtitle": "Steuere KI-Insights und überprüfe, wie Bizoot sensible Informationen schützt.",
+  "support": "Support",
+  "contactSupport": "Support kontaktieren",
+  "contactSupportSubtitle": "Hole dir Hilfe, melde ein Problem oder teile Feedback mit dem Bizoot-Team.",
+  "legal": "Rechtliches",
+  "savedServices": "Gespeicherte Dienste",
+  "dangerZone": "Gefahrenzone",
+  "logout": "Abmelden",
+  "deleteAccount": "Konto löschen",
+  "savedServicesEmptyTitle": "Noch keine benutzerdefinierten Dienste",
+  "savedServicesEmptyBody": "Wenn du ein benutzerdefiniertes Abonnement mit deinem eigenen Kündigungslink erstellst, merkt sich Bizoot es hier für schnelleres Autofill beim nächsten Mal.",
+  "savedServiceUpdated": "Gespeicherter Dienst aktualisiert.",
+  "savedServiceUpdatedFailed": "Wir konnten den gespeicherten Dienst gerade nicht aktualisieren.",
+  "editSavedService": "Gespeicherten Dienst bearbeiten",
+  "deleteSavedService": "Gespeicherten Dienst löschen",
+  "cancellationUrl": "Kündigungs-URL",
+  "cancel": "Abbrechen",
+  "save": "Speichern",
+  "deleteSavedServiceQuestion": "Gespeicherten Dienst löschen?",
+  "deleteSavedServiceBody": "Bizoot wird {serviceName} vergessen und den Dienst nicht mehr aus deiner benutzerdefinierten Liste vorschlagen.",
+  "@deleteSavedServiceBody": {
+    "placeholders": {
+      "serviceName": {}
+    }
+  },
+  "savedServiceDeleted": "Gespeicherter Dienst gelöscht.",
+  "savedServiceDeletedFailed": "Wir konnten den gespeicherten Dienst gerade nicht löschen.",
+  "noSavedCancellationUrl": "Noch keine gespeicherte Kündigungs-URL.",
+  "usedTimes": "{count} Mal verwendet",
+  "@usedTimes": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "debugLocalization": "Lokalisierungs-Debug",
+  "currentLocale": "Aktuelle Locale",
+  "supportedLocalesLabel": "Unterstützte Locales",
+  "fallbackBehavior": "Fallback-Verhalten",
+  "fallbackBehaviorValue": "Nicht unterstützte Gerätesprachen fallen auf Englisch zurück.",
+  "missingTranslationFallbackCount": "Fallback-Anzahl für fehlende Übersetzungen",
+  "premiumTooltip": "Premium"
+}

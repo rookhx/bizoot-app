@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "description": "Bizoot Top 100 subscription provider registry. Place matching logo files inside assets/brand_icons/ with the exact logo filename.",
+  "providers": [
+    {
+      "id": "netflix",
+      "displayName": "Netflix",
+      "aliases": [
+        "netflix",
+        "netflix standard",
+        "netflix premium"
+      ],
+      "category": "Streaming",
+      "logo": "netflix.png",
+      "defaultFrequency": "Monthly",
+      "website": "",
+      "cancellationUrl": ""
+    },
+    {
+      "id": "spotify",
+      "displayName": "Spotify",
+      "aliases": [
+        "spotify",
+        "spotify premium",
+        "spotify family"
+      ],
+      "category": "Music",
+      "logo": "spotify.png",
+      "defaultFrequency": "Monthly",
+      "website": "",
+      "cancellationUrl": ""
+    },
+    {
+      "id": "youtubepremium",
+      "displayName": "YouTube Premium",
+      "aliases": [
+        "youtube premium",
+        "youtube",
+        "yt premium"
+      ],
+      "category": "Streaming",
+      "logo": "youtubepremium.png",
+      "defaultFrequency": "Monthly",
+      "website": "",
+      "cancellationUrl": ""
+    },
+    {
+      "id": "youtubemusic",
+      "displayName": "YouTube Music",
+      "aliases": [
+        "youtube music",
+        "yt music"
+      ],
+      "category": "Music",
+      "logo": "youtubemusic.png",
+      "defaultFrequency": "Monthly",
+      "website": "",
+      "cancellationUrl": ""
+    },
+    {
+      "id": "disneyplus",
+      "displayName": "Disney+",
+      "aliases": [
+        "disney+",
+        "disney plus",
+        "disneyplus"
+      ],
+      "category": "Streaming",
+      "logo": "disneyplus.png",
+      "defaultFrequency": "Monthly",
+      "website": "",
+      "cancellationUrl": ""
+    },
+    {
+      "id": "amazonprimevideo",
+      "displayName": "Amazon Prime Video",
+      "aliases": [
+        "prime video",
+        "amazon prime video"
+      ],
+      "category": "Streaming",
+      "logo": "amazonprimevideo.png",
+      "defaultFrequency": "Monthly",
+      "website": "",
+      "cancellationUrl": ""
+    },
+    {
+      "id": "hulu",
+      "displayName": "Hulu",
+      "aliases": [
+        "hulu",
+        "hulu plus"
+      ],
+      "category": "Streaming",
+      "logo": "hulu.png",
+      "defaultFrequency": "Monthly",
+      "website": "",
+      "cancellationUrl": ""
+    },
+    {
+      "id": "max",
+      "displayName": "Max",
+      "aliases": [
+        "max",
+        "hbo max",
+        "hbomax"
+      ],
+      "category": "Streaming",
+      "logo": "max.png",
+      "defaultFrequency": "Monthly",
+      "website": "",
+      "cancellationUrl": ""
+    },
+    {
+      "id": "appletvplus",
+      "displayName": "Apple TV+",
+      "aliases": [
+        "apple tv+",
+        "apple tv plus",
+        "appletv"
+      ],
+      "category": "Streaming",
+      "logo": "appletvplus.png",
+      "defaultFrequency": "Monthly",
+      "website": "",
+      "cancellationUrl": ""
+    },
+    {
+      "id": "wolt",
+      "displayName": "Wolt+",
+      "aliases": [
+        "wolt",
+        "wolt+",
+        "wolt plus"
+      ],
+      "category": "Shopping & Delivery",
+      "logo": "wolt.png",
+      "defaultFrequency": "Monthly",
+      "website": "https://wolt.com",
+      "cancellationUrl": "https://wolt.com/en/account"
+    },
+    {
+      "id": "justeat",
+      "displayName": "Just Eat",
+      "aliases": [
+        "just eat",
+        "justeat",
+        "just eat takeaway"
+      ],
+      "category": "Shopping & Delivery",
+      "logo": "justeat.png",
+      "defaultFrequency": "Monthly",
+      "website": "https://www.justeat.com",
+      "cancellationUrl": "https://www.justeat.com/account"
+    }
+  ]
+}

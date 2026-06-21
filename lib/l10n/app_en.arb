@@ -1,0 +1,200 @@
+{
+  "@@locale": "en",
+  "appName": "Bizoot",
+  "dashboard": "Dashboard",
+  "calendar": "Calendar",
+  "subscriptions": "Subscriptions",
+  "reports": "Reports",
+  "settings": "Settings",
+  "premium": "Premium",
+  "authWelcomeBack": "Welcome back",
+  "authCreateAccount": "Create your Bizoot account",
+  "authWelcomeSubtitle": "Log in to see what your fixed costs are really doing to your month.",
+  "authCreateSubtitle": "Create your account and bring every recurring charge into one premium control center.",
+  "authHero": "Stop wasting money on forgotten subscriptions.",
+  "email": "Email",
+  "password": "Password",
+  "logIn": "Log in",
+  "createAccount": "Create account",
+  "enterEmailPassword": "Enter both your email and password to continue.",
+  "alreadyHaveAccount": "Already have an account? Log in",
+  "needAccount": "Need an account? Sign up",
+  "onboardingStep": "Step {current} of {total}",
+  "@onboardingStep": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "back": "Back",
+  "continueLabel": "Continue",
+  "finishSetup": "Finish setup",
+  "finishingSetup": "Finishing setup...",
+  "fullNameAndCountryRequired": "Full name and country are required.",
+  "validCountryRequired": "Please select a valid country from the list.",
+  "profileSetup": "Profile setup",
+  "profileSetupSubtitle": "Let's personalize Bizoot before we start tracking your recurring spending.",
+  "tapChooseProfilePicture": "Tap to choose a profile picture",
+  "profilePictureSelected": "Profile picture selected",
+  "opensPhoneGallery": "Opens your phone gallery",
+  "fullName": "Full name",
+  "phoneNumberOptional": "Phone number (optional)",
+  "country": "Country",
+  "financialSetup": "Financial setup",
+  "financialSetupSubtitle": "Choose the money settings Bizoot should use across your dashboard, insights, and reminders.",
+  "currency": "Currency",
+  "currencyAutoSelected": "Automatically selected from your chosen country.",
+  "monthlyIncome": "Monthly income",
+  "monthlyIncomeHelper": "Optional but recommended for Health Score and safe-to-spend.",
+  "mainFinancialGoal": "Main financial goal",
+  "estimatedSubscriptions": "Estimated subscriptions",
+  "estimatedSubscriptionsLabel": "{count} subscriptions",
+  "@estimatedSubscriptionsLabel": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "goalSaveMoney": "Save money",
+  "goalTrackBills": "Track bills",
+  "goalAvoidSurpriseCharges": "Avoid surprise charges",
+  "goalCancelUnusedSubscriptions": "Cancel unused subscriptions",
+  "settingsSyncing": "Saving your latest Bizoot changes...",
+  "settingsOffline": "Offline mode active. Your changes stay safe and will continue when you are back online.",
+  "settingsPendingChanges": "A few recent changes are still being saved.",
+  "settingsReady": "Your account, reminders, privacy, and support settings live here.",
+  "notifications": "Notifications",
+  "language": "Language",
+  "languageDescription": "Choose the language Bizoot should use across the app.",
+  "languageEnglish": "English",
+  "languageDanish": "Dansk",
+  "languageGerman": "Deutsch",
+  "languageSpanish": "Español",
+  "languageUpdated": "Language updated.",
+  "notificationPreferencesUpdated": "Notification preferences updated.",
+  "notificationPreferencesFailed": "We could not update your notification preferences right now.",
+  "signOutQuestion": "Sign out of Bizoot?",
+  "signOutBody": "You will return to the login screen, and your synced account data will remain attached to your account.",
+  "staySignedIn": "Stay signed in",
+  "signOut": "Sign out",
+  "openPhoneNotificationSettings": "Open phone notification settings",
+  "paymentReminders": "Payment reminders",
+  "paymentRemindersSubtitle": "Due tomorrow and due soon reminders for your active subscriptions.",
+  "weeklySummaries": "Weekly summaries",
+  "weeklySummariesSubtitle": "Sunday evening summaries for next week's renewals and totals.",
+  "trialAlerts": "Trial alerts",
+  "trialAlertsSubtitle": "Warnings before a free trial turns into a paid subscription.",
+  "smartInsights": "Smart insights",
+  "smartInsightsSubtitle": "Savings nudges, cancellation follow-ups, and recurring-spend warnings.",
+  "promotionalNotifications": "Promotional notifications",
+  "promotionalNotificationsSubtitle": "Optional product updates, launch news, and feature announcements.",
+  "premiumRequiredSuffix": "{text} Premium required.",
+  "@premiumRequiredSuffix": {
+    "placeholders": {
+      "text": {}
+    }
+  },
+  "subscriptionPremium": "Subscription & Premium",
+  "currentPlan": "Current plan",
+  "trialStatus": "Trial status",
+  "subscriptionUsage": "Subscription usage",
+  "whatHappensNow": "What happens now",
+  "planPremium": "Premium",
+  "planTrial": "7-day trial",
+  "planFree": "Free",
+  "premiumUnlocked": "Premium unlocked",
+  "trialDaysRemaining": "{days} days remaining",
+  "@trialDaysRemaining": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "trialEnded": "Trial ended",
+  "subscriptionsTrackedUnlimited": "{count} subscriptions tracked • unlimited plan",
+  "@subscriptionsTrackedUnlimited": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionsUsed": "{count} / {limit} subscriptions used",
+  "@subscriptionsUsed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "limit": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumActiveDescription": "You have unlimited subscription tracking and all premium features unlocked.",
+  "trialPremiumDescription": "You have full premium features during trial, with a 5-subscription trial limit.",
+  "freePlanDescription": "You can keep tracking up to {limit} active subscriptions on this plan.",
+  "@freePlanDescription": {
+    "placeholders": {
+      "limit": {
+        "type": "int"
+      }
+    }
+  },
+  "limitReachedDescription": "Limit reached - upgrade for unlimited tracking.",
+  "upgradeToPremium": "Upgrade to Premium",
+  "premiumFeatureComparison": "Premium feature comparison",
+  "premiumCompareFree": "Free: up to 5 active subscriptions, basic reminders, core tracking",
+  "premiumCompareOne": "Premium: unlimited subscriptions, advanced reports, smart insights",
+  "premiumCompareTwo": "Premium: richer cancellation intelligence, weekly summaries, and deeper insights",
+  "privacySecurity": "Privacy & Security",
+  "privacyAiSettings": "Privacy & AI Settings",
+  "privacyAiSubtitle": "Control AI insights and review how Bizoot protects sensitive information.",
+  "support": "Support",
+  "contactSupport": "Contact Support",
+  "contactSupportSubtitle": "Get help, report an issue, or share feedback with the Bizoot team.",
+  "legal": "Legal",
+  "savedServices": "Saved Services",
+  "dangerZone": "Danger Zone",
+  "logout": "Logout",
+  "deleteAccount": "Delete Account",
+  "savedServicesEmptyTitle": "No custom services yet",
+  "savedServicesEmptyBody": "When you create a custom subscription with your own cancellation link, Bizoot will remember it here for faster autofill next time.",
+  "savedServiceUpdated": "Saved service updated.",
+  "savedServiceUpdatedFailed": "We could not update that saved service right now.",
+  "editSavedService": "Edit saved service",
+  "deleteSavedService": "Delete saved service",
+  "cancellationUrl": "Cancellation URL",
+  "cancel": "Cancel",
+  "save": "Save",
+  "deleteSavedServiceQuestion": "Delete saved service?",
+  "deleteSavedServiceBody": "Bizoot will forget {serviceName} and stop suggesting it from your custom list.",
+  "@deleteSavedServiceBody": {
+    "placeholders": {
+      "serviceName": {}
+    }
+  },
+  "savedServiceDeleted": "Saved service deleted.",
+  "savedServiceDeletedFailed": "We could not delete that saved service right now.",
+  "noSavedCancellationUrl": "No saved cancellation URL yet.",
+  "usedTimes": "Used {count} times",
+  "@usedTimes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "debugLocalization": "Localization Debug",
+  "currentLocale": "Current locale",
+  "supportedLocalesLabel": "Supported locales",
+  "fallbackBehavior": "Fallback behavior",
+  "fallbackBehaviorValue": "Unsupported device locales fall back to English.",
+  "missingTranslationFallbackCount": "Missing translation fallback count",
+  "premiumTooltip": "Premium"
+}

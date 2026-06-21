@@ -1,0 +1,3779 @@
+[
+  {
+    "id": "netflix",
+    "name": "Netflix",
+    "category": "Video Streaming",
+    "aliases": [
+      "netflix standard",
+      "netflix premium"
+    ],
+    "website": "https://www.netflix.com",
+    "cancelUrl": "https://www.netflix.com/cancelplan",
+    "icon": "netflix",
+    "color": "#E50914",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15.49,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "disney-plus",
+    "name": "Disney+",
+    "category": "Video Streaming",
+    "aliases": [
+      "disney plus"
+    ],
+    "website": "https://www.disneyplus.com",
+    "cancelUrl": "https://www.disneyplus.com/account/subscription",
+    "icon": "disney-plus",
+    "color": "#113CCF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 13.99,
+    "tags": [
+      "video",
+      "streaming",
+      "family"
+    ]
+  },
+  {
+    "id": "hulu",
+    "name": "Hulu",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://www.hulu.com",
+    "cancelUrl": "https://secure.hulu.com/account",
+    "icon": "hulu",
+    "color": "#1CE783",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "hbo-max",
+    "name": "HBO Max",
+    "category": "Video Streaming",
+    "aliases": [
+      "hbomax"
+    ],
+    "website": "https://www.max.com",
+    "cancelUrl": "https://www.max.com/account/subscription",
+    "icon": "hbo-max",
+    "color": "#7B2FF7",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15.99,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "max",
+    "name": "Max",
+    "category": "Video Streaming",
+    "aliases": [
+      "max ad free"
+    ],
+    "website": "https://www.max.com",
+    "cancelUrl": "https://www.max.com/account/subscription",
+    "icon": "max",
+    "color": "#5B2EFF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15.99,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "amazon-prime-video",
+    "name": "Amazon Prime Video",
+    "category": "Video Streaming",
+    "aliases": [
+      "prime video"
+    ],
+    "website": "https://www.primevideo.com",
+    "cancelUrl": "https://www.amazon.com/gp/video/settings",
+    "cancelUrlType": "billing_page",
+    "icon": "amazon-prime-video",
+    "color": "#00A8E1",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8.99,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "apple-tv-plus",
+    "name": "Apple TV+",
+    "category": "Video Streaming",
+    "aliases": [
+      "apple tv plus"
+    ],
+    "website": "https://tv.apple.com",
+    "cancelUrl": "https://support.apple.com/en-us/118428",
+    "cancelUrlType": "billing_page",
+    "icon": "apple-tv-plus",
+    "color": "#A3AAAE",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "paramount-plus",
+    "name": "Paramount+",
+    "category": "Video Streaming",
+    "aliases": [
+      "paramount plus"
+    ],
+    "website": "https://www.paramountplus.com",
+    "cancelUrl": "https://www.paramountplus.com/account",
+    "icon": "paramount-plus",
+    "color": "#0064FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 11.99,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "peacock",
+    "name": "Peacock",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://www.peacocktv.com",
+    "cancelUrl": "https://www.peacocktv.com/account",
+    "icon": "peacock",
+    "color": "#F5C518",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 7.99,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "crunchyroll",
+    "name": "Crunchyroll",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://www.crunchyroll.com",
+    "cancelUrl": "https://www.crunchyroll.com/account/membership",
+    "icon": "crunchyroll",
+    "color": "#F47521",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "video",
+      "anime",
+      "streaming"
+    ]
+  },
+  {
+    "id": "discovery-plus",
+    "name": "Discovery+",
+    "category": "Video Streaming",
+    "aliases": [
+      "discovery plus"
+    ],
+    "website": "https://www.discoveryplus.com",
+    "cancelUrl": "https://www.discoveryplus.com/account",
+    "icon": "discovery-plus",
+    "color": "#0A84FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8.99,
+    "tags": [
+      "video",
+      "streaming",
+      "documentary"
+    ]
+  },
+  {
+    "id": "youtube-premium",
+    "name": "YouTube Premium",
+    "category": "Video Streaming",
+    "aliases": [
+      "youtube premium"
+    ],
+    "website": "https://www.youtube.com/premium",
+    "cancelUrl": "https://www.youtube.com/paid_memberships",
+    "icon": "youtube-premium",
+    "color": "#FF0000",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 13.99,
+    "tags": [
+      "video",
+      "streaming",
+      "ads"
+    ]
+  },
+  {
+    "id": "youtube-tv",
+    "name": "YouTube TV",
+    "category": "Video Streaming",
+    "aliases": [
+      "youtube tv"
+    ],
+    "website": "https://tv.youtube.com",
+    "cancelUrl": "https://tv.youtube.com/settings/subscriptions",
+    "icon": "youtube-tv",
+    "color": "#FF0000",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 72.99,
+    "tags": [
+      "video",
+      "live tv",
+      "streaming"
+    ]
+  },
+  {
+    "id": "dazn",
+    "name": "DAZN",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://www.dazn.com",
+    "cancelUrl": "https://www.dazn.com/account",
+    "icon": "dazn",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 24.99,
+    "tags": [
+      "sports",
+      "streaming",
+      "video"
+    ]
+  },
+  {
+    "id": "espn-plus",
+    "name": "ESPN+",
+    "category": "Video Streaming",
+    "aliases": [
+      "espn plus"
+    ],
+    "website": "https://plus.espn.com",
+    "cancelUrl": "https://plus.espn.com/account",
+    "icon": "espn-plus",
+    "color": "#FF003C",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.99,
+    "tags": [
+      "sports",
+      "streaming",
+      "video"
+    ]
+  },
+  {
+    "id": "fubotv",
+    "name": "FuboTV",
+    "category": "Video Streaming",
+    "aliases": [
+      "fubo"
+    ],
+    "website": "https://www.fubo.tv",
+    "cancelUrl": "https://www.fubo.tv/account",
+    "icon": "fubotv",
+    "color": "#F15A29",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 79.99,
+    "tags": [
+      "live tv",
+      "sports",
+      "streaming"
+    ]
+  },
+  {
+    "id": "tubi",
+    "name": "Tubi",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://tubitv.com",
+    "cancelUrl": "https://tubitv.com/account",
+    "icon": "tubi",
+    "color": "#B71CFF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 0,
+    "tags": [
+      "video",
+      "streaming",
+      "free"
+    ]
+  },
+  {
+    "id": "mubi",
+    "name": "Mubi",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://mubi.com",
+    "cancelUrl": "https://mubi.com/en/account",
+    "icon": "mubi",
+    "color": "#121212",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.99,
+    "tags": [
+      "video",
+      "film",
+      "streaming"
+    ]
+  },
+  {
+    "id": "shudder",
+    "name": "Shudder",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://www.shudder.com",
+    "cancelUrl": "https://www.shudder.com/account",
+    "icon": "shudder",
+    "color": "#FF4D00",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 6.99,
+    "tags": [
+      "video",
+      "horror",
+      "streaming"
+    ]
+  },
+  {
+    "id": "plex-pass",
+    "name": "Plex Pass",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://www.plex.tv",
+    "cancelUrl": "https://www.plex.tv/manage-subscriptions",
+    "icon": "plex-pass",
+    "color": "#E5A00D",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "video",
+      "media",
+      "streaming"
+    ]
+  },
+  {
+    "id": "amc-plus",
+    "name": "AMC+",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://www.amcplus.com",
+    "cancelUrl": "https://www.amcplus.com/account",
+    "icon": "amc-plus",
+    "color": "#FFB000",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8.99,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "starz",
+    "name": "STARZ",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://www.starz.com",
+    "cancelUrl": "https://www.starz.com/us/en/account/subscription",
+    "icon": "starz",
+    "color": "#6D28D9",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.99,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "britbox",
+    "name": "BritBox",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://www.britbox.com",
+    "cancelUrl": "https://www.britbox.com/account",
+    "icon": "britbox",
+    "color": "#003399",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8.99,
+    "tags": [
+      "video",
+      "british",
+      "streaming"
+    ]
+  },
+  {
+    "id": "mgm-plus",
+    "name": "MGM+",
+    "category": "Video Streaming",
+    "aliases": [
+      "epix"
+    ],
+    "website": "https://www.mgmplus.com",
+    "cancelUrl": "https://www.mgmplus.com/account",
+    "icon": "mgm-plus",
+    "color": "#D4AF37",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 6.99,
+    "tags": [
+      "video",
+      "streaming",
+      "movies"
+    ]
+  },
+  {
+    "id": "hayu",
+    "name": "Hayu",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://www.hayu.com",
+    "cancelUrl": "https://www.hayu.com/account",
+    "icon": "hayu",
+    "color": "#6A0DAD",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 6.99,
+    "tags": [
+      "reality",
+      "streaming",
+      "video"
+    ]
+  },
+  {
+    "id": "viaplay",
+    "name": "Viaplay",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://viaplay.com",
+    "cancelUrl": "https://account.viaplay.com",
+    "icon": "viaplay",
+    "color": "#E11D48",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 13.99,
+    "tags": [
+      "video",
+      "streaming",
+      "sports"
+    ]
+  },
+  {
+    "id": "bet-plus",
+    "name": "BET+",
+    "category": "Video Streaming",
+    "aliases": [
+      "bet plus"
+    ],
+    "website": "https://www.bet.plus",
+    "cancelUrl": "https://www.bet.plus/account",
+    "icon": "bet-plus",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.99,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "bfi-player",
+    "name": "BFI Player",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://player.bfi.org.uk",
+    "cancelUrl": "https://player.bfi.org.uk/account",
+    "icon": "bfi-player",
+    "color": "#7C4DFF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 6.99,
+    "tags": [
+      "video",
+      "film",
+      "streaming"
+    ]
+  },
+  {
+    "id": "acorn-tv",
+    "name": "Acorn TV",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://acorn.tv",
+    "cancelUrl": "https://acorn.tv/account",
+    "icon": "acorn-tv",
+    "color": "#004B8D",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8.99,
+    "tags": [
+      "video",
+      "streaming",
+      "tv"
+    ]
+  },
+  {
+    "id": "criterion-channel",
+    "name": "Criterion Channel",
+    "category": "Video Streaming",
+    "aliases": [],
+    "website": "https://www.criterionchannel.com",
+    "cancelUrl": "https://www.criterionchannel.com/account",
+    "icon": "criterion-channel",
+    "color": "#FF5F45",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.99,
+    "tags": [
+      "video",
+      "film",
+      "streaming"
+    ]
+  },
+  {
+    "id": "spotify",
+    "name": "Spotify",
+    "category": "Music",
+    "aliases": [
+      "spotify premium",
+      "spotify family"
+    ],
+    "website": "https://spotify.com",
+    "cancelUrl": "https://www.spotify.com/account/subscription",
+    "icon": "spotify",
+    "color": "#1DB954",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.99,
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ]
+  },
+  {
+    "id": "apple-music",
+    "name": "Apple Music",
+    "category": "Music & Audio",
+    "aliases": [
+      "apple music"
+    ],
+    "website": "https://music.apple.com",
+    "cancelUrl": "https://apps.apple.com/account/subscriptions",
+    "icon": "apple-music",
+    "color": "#FA243C",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.99,
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ]
+  },
+  {
+    "id": "youtube-music",
+    "name": "YouTube Music",
+    "category": "Music & Audio",
+    "aliases": [
+      "youtube music"
+    ],
+    "website": "https://music.youtube.com",
+    "cancelUrl": "https://www.youtube.com/paid_memberships",
+    "icon": "youtube-music",
+    "color": "#FF0000",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.99,
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ]
+  },
+  {
+    "id": "tidal",
+    "name": "Tidal",
+    "category": "Music & Audio",
+    "aliases": [],
+    "website": "https://tidal.com",
+    "cancelUrl": "https://my.tidal.com/account/subscription",
+    "icon": "tidal",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.99,
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ]
+  },
+  {
+    "id": "soundcloud-go",
+    "name": "SoundCloud Go",
+    "category": "Music & Audio",
+    "aliases": [
+      "soundcloud go"
+    ],
+    "website": "https://soundcloud.com/go",
+    "cancelUrl": "https://soundcloud.com/you/subscriptions",
+    "icon": "soundcloud-go",
+    "color": "#FF7700",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 5.99,
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ]
+  },
+  {
+    "id": "deezer",
+    "name": "Deezer",
+    "category": "Music & Audio",
+    "aliases": [],
+    "website": "https://www.deezer.com",
+    "cancelUrl": "https://www.deezer.com/account/subscription",
+    "icon": "deezer",
+    "color": "#FF0092",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 11.99,
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ]
+  },
+  {
+    "id": "audible",
+    "name": "Audible",
+    "category": "Music & Audio",
+    "aliases": [],
+    "website": "https://www.audible.com",
+    "cancelUrl": "https://www.audible.com/account/overview",
+    "icon": "audible",
+    "color": "#F7991C",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.95,
+    "tags": [
+      "audio",
+      "books",
+      "listening"
+    ]
+  },
+  {
+    "id": "pandora",
+    "name": "Pandora",
+    "category": "Music & Audio",
+    "aliases": [],
+    "website": "https://www.pandora.com",
+    "cancelUrl": "https://www.pandora.com/account/subscription",
+    "icon": "pandora",
+    "color": "#0056FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ]
+  },
+  {
+    "id": "siriusxm",
+    "name": "SiriusXM",
+    "category": "Music & Audio",
+    "aliases": [],
+    "website": "https://www.siriusxm.com",
+    "cancelUrl": "https://care.siriusxm.com/account",
+    "icon": "siriusxm",
+    "color": "#0033A1",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 11.99,
+    "tags": [
+      "audio",
+      "radio",
+      "music"
+    ]
+  },
+  {
+    "id": "amazon-music-unlimited",
+    "name": "Amazon Music Unlimited",
+    "category": "Music & Audio",
+    "aliases": [
+      "amazon music unlimited"
+    ],
+    "website": "https://music.amazon.com",
+    "cancelUrl": "https://www.amazon.com/music/settings",
+    "icon": "amazon-music-unlimited",
+    "color": "#00A8E1",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.99,
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ]
+  },
+  {
+    "id": "qobuz",
+    "name": "Qobuz",
+    "category": "Music & Audio",
+    "aliases": [],
+    "website": "https://www.qobuz.com",
+    "cancelUrl": "https://www.qobuz.com/account",
+    "icon": "qobuz",
+    "color": "#1A1A1A",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12.99,
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ]
+  },
+  {
+    "id": "tunein-premium",
+    "name": "TuneIn Premium",
+    "category": "Music & Audio",
+    "aliases": [
+      "tunein premium"
+    ],
+    "website": "https://tunein.com",
+    "cancelUrl": "https://tunein.com/account",
+    "icon": "tunein-premium",
+    "color": "#14A0FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "audio",
+      "radio",
+      "streaming"
+    ]
+  },
+  {
+    "id": "pocket-casts-plus",
+    "name": "Pocket Casts Plus",
+    "category": "Music & Audio",
+    "aliases": [
+      "pocket casts plus"
+    ],
+    "website": "https://pocketcasts.com",
+    "cancelUrl": "https://play.pocketcasts.com/account",
+    "icon": "pocket-casts-plus",
+    "color": "#F43F5E",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 3.99,
+    "tags": [
+      "podcast",
+      "audio",
+      "streaming"
+    ]
+  },
+  {
+    "id": "napster",
+    "name": "Napster",
+    "category": "Music & Audio",
+    "aliases": [],
+    "website": "https://www.napster.com",
+    "cancelUrl": "https://app.napster.com/account",
+    "icon": "napster",
+    "color": "#23395B",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.99,
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ]
+  },
+  {
+    "id": "kobo-plus-listen",
+    "name": "Kobo Plus Listen",
+    "category": "Music & Audio",
+    "aliases": [],
+    "website": "https://www.kobo.com",
+    "cancelUrl": "https://www.kobo.com/account/subscriptions",
+    "icon": "kobo-plus-listen",
+    "color": "#0E6EFD",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 7.99,
+    "tags": [
+      "audio",
+      "books",
+      "listening"
+    ]
+  },
+  {
+    "id": "chatgpt-plus",
+    "name": "ChatGPT Plus",
+    "category": "AI Tools",
+    "aliases": [
+      "chatgpt premium",
+      "openai chatgpt plus",
+      "chatgpt"
+    ],
+    "website": "https://chatgpt.com",
+    "cancelUrl": "https://chatgpt.com/#settings/Subscription",
+    "icon": "chatgpt",
+    "color": "#10A37F",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 20,
+    "tags": [
+      "ai",
+      "assistant",
+      "chat"
+    ]
+  },
+  {
+    "id": "claude-pro",
+    "name": "Claude Pro",
+    "category": "AI Tools",
+    "aliases": [
+      "claude premium"
+    ],
+    "website": "https://claude.ai",
+    "cancelUrl": "https://claude.ai/settings/billing",
+    "icon": "claude",
+    "color": "#D97706",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 20,
+    "tags": [
+      "ai",
+      "assistant",
+      "chat"
+    ]
+  },
+  {
+    "id": "gemini-advanced",
+    "name": "Gemini Advanced",
+    "category": "AI Tools",
+    "aliases": [
+      "google gemini advanced"
+    ],
+    "website": "https://gemini.google.com",
+    "cancelUrl": "https://one.google.com/settings",
+    "icon": "gemini",
+    "color": "#4285F4",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 19.99,
+    "tags": [
+      "ai",
+      "assistant",
+      "chat"
+    ]
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://www.midjourney.com",
+    "cancelUrl": "https://www.midjourney.com/account",
+    "icon": "midjourney",
+    "color": "#4F46E5",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10,
+    "tags": [
+      "ai",
+      "image",
+      "creative"
+    ]
+  },
+  {
+    "id": "perplexity-pro",
+    "name": "Perplexity Pro",
+    "category": "AI Tools",
+    "aliases": [
+      "perplexity premium"
+    ],
+    "website": "https://www.perplexity.ai",
+    "cancelUrl": "https://www.perplexity.ai/settings",
+    "icon": "perplexity",
+    "color": "#14B8A6",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 20,
+    "tags": [
+      "ai",
+      "search",
+      "assistant"
+    ]
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://www.notion.so",
+    "cancelUrl": "https://www.notion.so/product/ai",
+    "icon": "notion-ai",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10,
+    "tags": [
+      "ai",
+      "productivity",
+      "writing"
+    ]
+  },
+  {
+    "id": "grammarly-premium",
+    "name": "Grammarly Premium",
+    "category": "AI Tools",
+    "aliases": [
+      "grammarly premium"
+    ],
+    "website": "https://www.grammarly.com",
+    "cancelUrl": "https://account.grammarly.com/subscription",
+    "icon": "grammarly",
+    "color": "#15C39A",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12,
+    "tags": [
+      "ai",
+      "writing",
+      "productivity"
+    ]
+  },
+  {
+    "id": "canva-pro",
+    "name": "Canva Pro",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://www.canva.com",
+    "cancelUrl": "https://www.canva.com/settings/billing-and-plans/",
+    "cancelUrlType": "billing_page",
+    "icon": "canva-pro",
+    "color": "#00C4CC",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.99,
+    "tags": [
+      "ai",
+      "design",
+      "productivity"
+    ]
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://runwayml.com",
+    "cancelUrl": "https://app.runwayml.com/account/billing",
+    "icon": "runway",
+    "color": "#7C3AED",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15,
+    "tags": [
+      "ai",
+      "video",
+      "creative"
+    ]
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://elevenlabs.io",
+    "cancelUrl": "https://elevenlabs.io/subscription",
+    "icon": "elevenlabs",
+    "color": "#111827",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 11,
+    "tags": [
+      "ai",
+      "audio",
+      "voice"
+    ]
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://cursor.com",
+    "cancelUrl": "https://cursor.com/settings/billing",
+    "icon": "cursor",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 20,
+    "tags": [
+      "ai",
+      "developer",
+      "coding"
+    ]
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "AI Tools",
+    "aliases": [
+      "copilot"
+    ],
+    "website": "https://github.com/features/copilot",
+    "cancelUrl": "https://github.com/settings/copilot",
+    "cancelUrlType": "billing_page",
+    "icon": "github-copilot",
+    "color": "#24292F",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10,
+    "tags": [
+      "ai",
+      "developer",
+      "coding"
+    ]
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://www.jasper.ai",
+    "cancelUrl": "https://app.jasper.ai/account/billing",
+    "icon": "jasper",
+    "color": "#7C4DFF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 39,
+    "tags": [
+      "ai",
+      "writing",
+      "marketing"
+    ]
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://www.copy.ai",
+    "cancelUrl": "https://app.copy.ai/settings/billing",
+    "icon": "copy-ai",
+    "color": "#FF6B6B",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 36,
+    "tags": [
+      "ai",
+      "writing",
+      "marketing"
+    ]
+  },
+  {
+    "id": "poe",
+    "name": "Poe",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://poe.com",
+    "cancelUrl": "https://poe.com/settings/subscription",
+    "icon": "poe",
+    "color": "#9333EA",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 19.99,
+    "tags": [
+      "ai",
+      "assistant",
+      "chat"
+    ]
+  },
+  {
+    "id": "writesonic",
+    "name": "Writesonic",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://writesonic.com",
+    "cancelUrl": "https://app.writesonic.com/billing",
+    "icon": "writesonic",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 16,
+    "tags": [
+      "ai",
+      "writing",
+      "marketing"
+    ]
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://www.descript.com",
+    "cancelUrl": "https://www.descript.com/settings/billing",
+    "icon": "descript",
+    "color": "#EF4444",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 24,
+    "tags": [
+      "ai",
+      "audio",
+      "video"
+    ]
+  },
+  {
+    "id": "synthesia",
+    "name": "Synthesia",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://www.synthesia.io",
+    "cancelUrl": "https://app.synthesia.io/billing",
+    "icon": "synthesia",
+    "color": "#1D4ED8",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 29,
+    "tags": [
+      "ai",
+      "video",
+      "creative"
+    ]
+  },
+  {
+    "id": "otter-ai",
+    "name": "Otter AI",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://otter.ai",
+    "cancelUrl": "https://otter.ai/account",
+    "icon": "otter-ai",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 16.99,
+    "tags": [
+      "ai",
+      "notes",
+      "meetings"
+    ]
+  },
+  {
+    "id": "fireflies-ai",
+    "name": "Fireflies.ai",
+    "category": "AI Tools",
+    "aliases": [],
+    "website": "https://fireflies.ai",
+    "cancelUrl": "https://app.fireflies.ai/settings/billing",
+    "icon": "fireflies-ai",
+    "color": "#F97316",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 18,
+    "tags": [
+      "ai",
+      "meetings",
+      "notes"
+    ]
+  },
+  {
+    "id": "microsoft-365",
+    "name": "Microsoft 365",
+    "category": "Productivity & Software",
+    "aliases": [
+      "office 365"
+    ],
+    "website": "https://www.microsoft.com/microsoft-365",
+    "cancelUrl": "https://account.microsoft.com/services",
+    "icon": "microsoft-365",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "productivity",
+      "office",
+      "software"
+    ]
+  },
+  {
+    "id": "google-one",
+    "name": "Google One",
+    "category": "Cloud Storage",
+    "aliases": [],
+    "website": "https://one.google.com",
+    "cancelUrl": "https://one.google.com/settings",
+    "icon": "google-one",
+    "color": "#4285F4",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "storage",
+      "cloud",
+      "backup"
+    ]
+  },
+  {
+    "id": "dropbox",
+    "name": "Dropbox",
+    "category": "Cloud Storage",
+    "aliases": [],
+    "website": "https://www.dropbox.com",
+    "cancelUrl": "https://www.dropbox.com/account/plan",
+    "icon": "dropbox",
+    "color": "#0061FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 11.99,
+    "tags": [
+      "storage",
+      "cloud",
+      "backup"
+    ]
+  },
+  {
+    "id": "icloud-plus",
+    "name": "iCloud+",
+    "category": "Cloud Storage",
+    "aliases": [
+      "icloud plus",
+      "apple icloud",
+      "icloud"
+    ],
+    "website": "https://www.icloud.com",
+    "cancelUrl": "https://support.apple.com/en-us/108314",
+    "icon": "icloud-plus",
+    "color": "#0EA5E9",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 2.99,
+    "tags": [
+      "storage",
+      "cloud",
+      "backup"
+    ]
+  },
+  {
+    "id": "adobe-creative-cloud",
+    "name": "Adobe Creative Cloud",
+    "category": "Productivity & Software",
+    "aliases": [
+      "creative cloud"
+    ],
+    "website": "https://www.adobe.com/creativecloud.html",
+    "cancelUrl": "https://account.adobe.com/plans",
+    "icon": "adobe-creative-cloud",
+    "color": "#FF0000",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 59.99,
+    "tags": [
+      "design",
+      "software",
+      "creative"
+    ]
+  },
+  {
+    "id": "canva",
+    "name": "Canva",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://www.canva.com",
+    "cancelUrl": "https://www.canva.com/settings/billing",
+    "icon": "canva",
+    "color": "#00C4CC",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12.99,
+    "tags": [
+      "design",
+      "productivity",
+      "creative"
+    ]
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://www.figma.com",
+    "cancelUrl": "https://www.figma.com/settings",
+    "cancelUrlType": "billing_page",
+    "icon": "figma",
+    "color": "#A259FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15,
+    "tags": [
+      "design",
+      "productivity",
+      "software"
+    ]
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://www.notion.so",
+    "cancelUrl": "https://www.notion.so/my-settings/billing",
+    "cancelUrlType": "billing_page",
+    "icon": "notion",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10,
+    "tags": [
+      "notes",
+      "productivity",
+      "software"
+    ]
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://slack.com",
+    "cancelUrl": "https://slack.com/account/settings",
+    "cancelUrlType": "billing_page",
+    "icon": "slack",
+    "color": "#4A154B",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8.75,
+    "tags": [
+      "productivity",
+      "team",
+      "software"
+    ]
+  },
+  {
+    "id": "zoom",
+    "name": "Zoom",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://zoom.us",
+    "cancelUrl": "https://zoom.us/billing",
+    "icon": "zoom",
+    "color": "#2D8CFF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15.99,
+    "tags": [
+      "meetings",
+      "productivity",
+      "software"
+    ]
+  },
+  {
+    "id": "evernote",
+    "name": "Evernote",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://evernote.com",
+    "cancelUrl": "https://www.evernote.com/billing",
+    "icon": "evernote",
+    "color": "#00A82D",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.99,
+    "tags": [
+      "notes",
+      "productivity",
+      "software"
+    ]
+  },
+  {
+    "id": "todoist",
+    "name": "Todoist",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://todoist.com",
+    "cancelUrl": "https://todoist.com/users/show_settings/subscription",
+    "icon": "todoist",
+    "color": "#E44332",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "tasks",
+      "productivity",
+      "software"
+    ]
+  },
+  {
+    "id": "clickup",
+    "name": "ClickUp",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://clickup.com",
+    "cancelUrl": "https://app.clickup.com/settings/billing",
+    "icon": "clickup",
+    "color": "#7B68EE",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10,
+    "tags": [
+      "project management",
+      "productivity",
+      "software"
+    ]
+  },
+  {
+    "id": "asana",
+    "name": "Asana",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://asana.com",
+    "cancelUrl": "https://app.asana.com/billing",
+    "icon": "asana",
+    "color": "#F06A6A",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.99,
+    "tags": [
+      "project management",
+      "productivity",
+      "software"
+    ]
+  },
+  {
+    "id": "trello",
+    "name": "Trello",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://trello.com",
+    "cancelUrl": "https://trello.com/billing",
+    "icon": "trello",
+    "color": "#026AA7",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 6,
+    "tags": [
+      "project management",
+      "productivity",
+      "software"
+    ]
+  },
+  {
+    "id": "bitwarden",
+    "name": "Bitwarden",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://bitwarden.com",
+    "cancelUrl": "https://vault.bitwarden.com/#/settings/subscription",
+    "icon": "bitwarden",
+    "color": "#175DDC",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 0.83,
+    "tags": [
+      "security",
+      "passwords",
+      "productivity"
+    ]
+  },
+  {
+    "id": "1password",
+    "name": "1Password",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://1password.com",
+    "cancelUrl": "https://my.1password.com/billing",
+    "icon": "1password",
+    "color": "#3B82F6",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "security",
+      "passwords",
+      "productivity"
+    ]
+  },
+  {
+    "id": "airtable",
+    "name": "Airtable",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://airtable.com",
+    "cancelUrl": "https://airtable.com/account",
+    "icon": "airtable",
+    "color": "#F59E0B",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 20,
+    "tags": [
+      "database",
+      "productivity",
+      "software"
+    ]
+  },
+  {
+    "id": "monday-com",
+    "name": "Monday.com",
+    "category": "Productivity & Software",
+    "aliases": [
+      "monday"
+    ],
+    "website": "https://monday.com",
+    "cancelUrl": "https://monday.com/billing",
+    "icon": "monday-com",
+    "color": "#FF3D57",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9,
+    "tags": [
+      "project management",
+      "productivity",
+      "software"
+    ]
+  },
+  {
+    "id": "miro",
+    "name": "Miro",
+    "category": "Productivity & Software",
+    "aliases": [],
+    "website": "https://miro.com",
+    "cancelUrl": "https://miro.com/billing",
+    "icon": "miro",
+    "color": "#FFD02F",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8,
+    "tags": [
+      "whiteboard",
+      "productivity",
+      "software"
+    ]
+  },
+  {
+    "id": "onedrive",
+    "name": "Cloud Storage",
+    "category": "Cloud Storage",
+    "aliases": [],
+    "website": "https://www.microsoft.com/microsoft-365/onedrive/online-cloud-storage",
+    "cancelUrl": "https://account.microsoft.com/services",
+    "icon": "onedrive",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 6.99,
+    "tags": [
+      "storage",
+      "cloud",
+      "backup"
+    ]
+  },
+  {
+    "id": "mega",
+    "name": "MEGA",
+    "category": "Cloud Storage",
+    "aliases": [],
+    "website": "https://mega.io",
+    "cancelUrl": "https://mega.nz/fm/account/plan",
+    "icon": "mega",
+    "color": "#D9272E",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.69,
+    "tags": [
+      "storage",
+      "cloud",
+      "backup"
+    ]
+  },
+  {
+    "id": "box",
+    "name": "Box",
+    "category": "Cloud Storage",
+    "aliases": [],
+    "website": "https://www.box.com",
+    "cancelUrl": "https://account.box.com/billing",
+    "icon": "box",
+    "color": "#0061D5",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15,
+    "tags": [
+      "storage",
+      "cloud",
+      "backup"
+    ]
+  },
+  {
+    "id": "pcloud",
+    "name": "pCloud",
+    "category": "Cloud Storage",
+    "aliases": [],
+    "website": "https://www.pcloud.com",
+    "cancelUrl": "https://www.pcloud.com/account.html",
+    "icon": "pcloud",
+    "color": "#16A34A",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "storage",
+      "cloud",
+      "backup"
+    ]
+  },
+  {
+    "id": "sync-com",
+    "name": "Sync.com",
+    "category": "Cloud Storage",
+    "aliases": [
+      "sync com"
+    ],
+    "website": "https://www.sync.com",
+    "cancelUrl": "https://app.sync.com/account",
+    "icon": "sync-com",
+    "color": "#0F62FE",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8,
+    "tags": [
+      "storage",
+      "cloud",
+      "backup"
+    ]
+  },
+  {
+    "id": "backblaze",
+    "name": "Backblaze",
+    "category": "Cloud Storage",
+    "aliases": [],
+    "website": "https://www.backblaze.com",
+    "cancelUrl": "https://secure.backblaze.com/user_signin.htm",
+    "icon": "backblaze",
+    "color": "#E11D48",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9,
+    "tags": [
+      "backup",
+      "cloud",
+      "storage"
+    ]
+  },
+  {
+    "id": "idrive",
+    "name": "IDrive",
+    "category": "Cloud Storage",
+    "aliases": [],
+    "website": "https://www.idrive.com",
+    "cancelUrl": "https://www.idrive.com/idrive/account",
+    "icon": "idrive",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8.25,
+    "tags": [
+      "backup",
+      "cloud",
+      "storage"
+    ]
+  },
+  {
+    "id": "proton-drive",
+    "name": "Proton Drive",
+    "category": "Cloud Storage",
+    "aliases": [],
+    "website": "https://proton.me/drive",
+    "cancelUrl": "https://account.proton.me/u/0/mail/account-dashboard",
+    "icon": "proton-drive",
+    "color": "#7C3AED",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "storage",
+      "cloud",
+      "privacy"
+    ]
+  },
+  {
+    "id": "tresorit",
+    "name": "Tresorit",
+    "category": "Cloud Storage",
+    "aliases": [],
+    "website": "https://tresorit.com",
+    "cancelUrl": "https://my.tresorit.com",
+    "icon": "tresorit",
+    "color": "#22C55E",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.99,
+    "tags": [
+      "storage",
+      "cloud",
+      "privacy"
+    ]
+  },
+  {
+    "id": "koofr",
+    "name": "Koofr",
+    "category": "Cloud Storage",
+    "aliases": [],
+    "website": "https://koofr.eu",
+    "cancelUrl": "https://app.koofr.net/account",
+    "icon": "koofr",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 6,
+    "tags": [
+      "storage",
+      "cloud",
+      "backup"
+    ]
+  },
+  {
+    "id": "strava",
+    "name": "Strava",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://www.strava.com",
+    "cancelUrl": "https://www.strava.com/settings/subscription",
+    "icon": "strava",
+    "color": "#FC4C02",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 11.99,
+    "tags": [
+      "fitness",
+      "health",
+      "training"
+    ]
+  },
+  {
+    "id": "myfitnesspal",
+    "name": "MyFitnessPal",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://www.myfitnesspal.com",
+    "cancelUrl": "https://www.myfitnesspal.com/premium",
+    "icon": "myfitnesspal",
+    "color": "#0066EE",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 19.99,
+    "tags": [
+      "fitness",
+      "health",
+      "nutrition"
+    ]
+  },
+  {
+    "id": "peloton",
+    "name": "Peloton",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://www.onepeloton.com",
+    "cancelUrl": "https://account.onepeloton.com",
+    "icon": "peloton",
+    "color": "#181A1D",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12.99,
+    "tags": [
+      "fitness",
+      "health",
+      "training"
+    ]
+  },
+  {
+    "id": "fitbit-premium",
+    "name": "Fitbit Premium",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://www.fitbit.com",
+    "cancelUrl": "https://www.fitbit.com/global/us/products/services/premium",
+    "icon": "fitbit-premium",
+    "color": "#00B0B9",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "fitness",
+      "health",
+      "tracking"
+    ]
+  },
+  {
+    "id": "nike-run-club",
+    "name": "Nike Run Club",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://www.nike.com/nrc-app",
+    "cancelUrl": "https://www.nike.com",
+    "icon": "nike-run-club",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 0,
+    "tags": [
+      "fitness",
+      "running",
+      "health"
+    ]
+  },
+  {
+    "id": "calm",
+    "name": "Calm",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://www.calm.com",
+    "cancelUrl": "https://www.calm.com/settings/billing",
+    "icon": "calm",
+    "color": "#5B8DEF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.99,
+    "tags": [
+      "health",
+      "mindfulness",
+      "wellness"
+    ]
+  },
+  {
+    "id": "headspace",
+    "name": "Headspace",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://www.headspace.com",
+    "cancelUrl": "https://www.headspace.com/subscriptions",
+    "icon": "headspace",
+    "color": "#F97316",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12.99,
+    "tags": [
+      "health",
+      "mindfulness",
+      "wellness"
+    ]
+  },
+  {
+    "id": "classpass",
+    "name": "ClassPass",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://classpass.com",
+    "cancelUrl": "https://classpass.com/account",
+    "icon": "classpass",
+    "color": "#EF4444",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 49,
+    "tags": [
+      "fitness",
+      "classes",
+      "health"
+    ]
+  },
+  {
+    "id": "centr",
+    "name": "Centr",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://centr.com",
+    "cancelUrl": "https://centr.com/account",
+    "icon": "centr",
+    "color": "#0EA5E9",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 29.99,
+    "tags": [
+      "fitness",
+      "workouts",
+      "health"
+    ]
+  },
+  {
+    "id": "noom",
+    "name": "Noom",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://www.noom.com",
+    "cancelUrl": "https://www.noom.com/account",
+    "icon": "noom",
+    "color": "#22C55E",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 17.99,
+    "tags": [
+      "health",
+      "nutrition",
+      "wellness"
+    ]
+  },
+  {
+    "id": "betterme",
+    "name": "BetterMe",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://betterme.world",
+    "cancelUrl": "https://betterme.world/account",
+    "icon": "betterme",
+    "color": "#A855F7",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 19.99,
+    "tags": [
+      "fitness",
+      "health",
+      "wellness"
+    ]
+  },
+  {
+    "id": "sweat",
+    "name": "Sweat",
+    "category": "Fitness & Health",
+    "aliases": [],
+    "website": "https://www.sweat.com",
+    "cancelUrl": "https://www.sweat.com/account",
+    "icon": "sweat",
+    "color": "#E11D48",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 19.99,
+    "tags": [
+      "fitness",
+      "workouts",
+      "health"
+    ]
+  },
+  {
+    "id": "alltrails-plus",
+    "name": "AllTrails+",
+    "category": "Fitness & Health",
+    "aliases": [
+      "alltrails plus"
+    ],
+    "website": "https://www.alltrails.com",
+    "cancelUrl": "https://www.alltrails.com/settings/account",
+    "icon": "alltrails-plus",
+    "color": "#16A34A",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 2.99,
+    "tags": [
+      "fitness",
+      "outdoors",
+      "health"
+    ]
+  },
+  {
+    "id": "duolingo",
+    "name": "Duolingo",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.duolingo.com",
+    "cancelUrl": "https://www.duolingo.com/settings/super",
+    "icon": "duolingo",
+    "color": "#58CC02",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12.99,
+    "tags": [
+      "learning",
+      "language",
+      "education"
+    ]
+  },
+  {
+    "id": "coursera",
+    "name": "Coursera",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.coursera.org",
+    "cancelUrl": "https://www.coursera.org/account-settings/subscriptions",
+    "cancelUrlType": "billing_page",
+    "icon": "coursera",
+    "color": "#0056D2",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 59,
+    "tags": [
+      "learning",
+      "courses",
+      "education"
+    ]
+  },
+  {
+    "id": "skillshare",
+    "name": "Skillshare",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.skillshare.com",
+    "cancelUrl": "https://www.skillshare.com/settings/payments",
+    "icon": "skillshare",
+    "color": "#00FF84",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14,
+    "tags": [
+      "learning",
+      "courses",
+      "education"
+    ]
+  },
+  {
+    "id": "udemy",
+    "name": "Udemy",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.udemy.com",
+    "cancelUrl": "https://www.udemy.com/user/edit-subscription",
+    "icon": "udemy",
+    "color": "#A435F0",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 19.99,
+    "tags": [
+      "learning",
+      "courses",
+      "education"
+    ]
+  },
+  {
+    "id": "masterclass",
+    "name": "MasterClass",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.masterclass.com",
+    "cancelUrl": "https://www.masterclass.com/settings",
+    "icon": "masterclass",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15,
+    "tags": [
+      "learning",
+      "courses",
+      "education"
+    ]
+  },
+  {
+    "id": "brilliant",
+    "name": "Brilliant",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://brilliant.org",
+    "cancelUrl": "https://brilliant.org/account",
+    "icon": "brilliant",
+    "color": "#F59E0B",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 24.99,
+    "tags": [
+      "learning",
+      "math",
+      "education"
+    ]
+  },
+  {
+    "id": "babbel",
+    "name": "Babbel",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.babbel.com",
+    "cancelUrl": "https://my.babbel.com/en/subscriptions",
+    "icon": "babbel",
+    "color": "#F97316",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8.95,
+    "tags": [
+      "learning",
+      "language",
+      "education"
+    ]
+  },
+  {
+    "id": "rosetta-stone",
+    "name": "Rosetta Stone",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.rosettastone.com",
+    "cancelUrl": "https://support.rosettastone.com",
+    "icon": "rosetta-stone",
+    "color": "#EF4444",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 11.99,
+    "tags": [
+      "learning",
+      "language",
+      "education"
+    ]
+  },
+  {
+    "id": "edx",
+    "name": "edX",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.edx.org",
+    "cancelUrl": "https://www.edx.org/account",
+    "icon": "edx",
+    "color": "#02262B",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 16,
+    "tags": [
+      "learning",
+      "courses",
+      "education"
+    ]
+  },
+  {
+    "id": "quizlet-plus",
+    "name": "Quizlet Plus",
+    "category": "Learning & Education",
+    "aliases": [
+      "quizlet plus"
+    ],
+    "website": "https://quizlet.com",
+    "cancelUrl": "https://quizlet.com/settings/subscription",
+    "icon": "quizlet-plus",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 7.99,
+    "tags": [
+      "learning",
+      "study",
+      "education"
+    ]
+  },
+  {
+    "id": "photomath-plus",
+    "name": "Photomath Plus",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://photomath.com",
+    "cancelUrl": "https://photomath.com/account",
+    "icon": "photomath-plus",
+    "color": "#EF4444",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "learning",
+      "math",
+      "education"
+    ]
+  },
+  {
+    "id": "wondrium",
+    "name": "Wondrium",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.wondrium.com",
+    "cancelUrl": "https://www.wondrium.com/account",
+    "icon": "wondrium",
+    "color": "#1D4ED8",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 19.99,
+    "tags": [
+      "learning",
+      "courses",
+      "education"
+    ]
+  },
+  {
+    "id": "codecademy-pro",
+    "name": "Codecademy Pro",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.codecademy.com",
+    "cancelUrl": "https://www.codecademy.com/account/billing",
+    "icon": "codecademy-pro",
+    "color": "#1F2937",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 19.99,
+    "tags": [
+      "learning",
+      "coding",
+      "education"
+    ]
+  },
+  {
+    "id": "datacamp",
+    "name": "DataCamp",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.datacamp.com",
+    "cancelUrl": "https://www.datacamp.com/settings/subscription",
+    "icon": "datacamp",
+    "color": "#10B981",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.99,
+    "tags": [
+      "learning",
+      "data",
+      "education"
+    ]
+  },
+  {
+    "id": "lingq",
+    "name": "LingQ",
+    "category": "Learning & Education",
+    "aliases": [],
+    "website": "https://www.lingq.com",
+    "cancelUrl": "https://www.lingq.com/settings/account",
+    "icon": "lingq",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12.99,
+    "tags": [
+      "learning",
+      "language",
+      "education"
+    ]
+  },
+  {
+    "id": "xbox-game-pass",
+    "name": "Xbox Game Pass",
+    "category": "Gaming",
+    "aliases": [
+      "game pass"
+    ],
+    "website": "https://www.xbox.com/game-pass",
+    "cancelUrl": "https://account.microsoft.com/services",
+    "icon": "xbox-game-pass",
+    "color": "#107C10",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 16.99,
+    "tags": [
+      "gaming",
+      "subscription",
+      "console"
+    ]
+  },
+  {
+    "id": "playstation-plus",
+    "name": "PlayStation Plus",
+    "category": "Gaming",
+    "aliases": [
+      "ps plus"
+    ],
+    "website": "https://www.playstation.com/ps-plus",
+    "cancelUrl": "https://www.playstation.com/support/subscriptions/cancel-ps-store-subscription/",
+    "cancelUrlType": "billing_page",
+    "icon": "playstation-plus",
+    "color": "#003087",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "gaming",
+      "subscription",
+      "console"
+    ]
+  },
+  {
+    "id": "nintendo-switch-online",
+    "name": "Nintendo Switch Online",
+    "category": "Gaming",
+    "aliases": [],
+    "website": "https://www.nintendo.com/switch/online-service",
+    "cancelUrl": "https://accounts.nintendo.com",
+    "icon": "nintendo-switch-online",
+    "color": "#E60012",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 3.99,
+    "tags": [
+      "gaming",
+      "subscription",
+      "console"
+    ]
+  },
+  {
+    "id": "ea-play",
+    "name": "EA Play",
+    "category": "Gaming",
+    "aliases": [],
+    "website": "https://www.ea.com/ea-play",
+    "cancelUrl": "https://myaccount.ea.com",
+    "icon": "ea-play",
+    "color": "#EA7317",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 5.99,
+    "tags": [
+      "gaming",
+      "subscription",
+      "pc"
+    ]
+  },
+  {
+    "id": "ubisoft-plus",
+    "name": "Ubisoft+",
+    "category": "Gaming",
+    "aliases": [],
+    "website": "https://store.ubisoft.com/ubisoftplus",
+    "cancelUrl": "https://account.ubisoft.com",
+    "icon": "ubisoft-plus",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 17.99,
+    "tags": [
+      "gaming",
+      "subscription",
+      "pc"
+    ]
+  },
+  {
+    "id": "geforce-now",
+    "name": "NVIDIA GeForce NOW",
+    "category": "Gaming",
+    "aliases": [],
+    "website": "https://www.nvidia.com/geforce-now",
+    "cancelUrl": "https://www.nvidia.com/account",
+    "icon": "geforce-now",
+    "color": "#76B900",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "gaming",
+      "cloud",
+      "subscription"
+    ]
+  },
+  {
+    "id": "world-of-warcraft",
+    "name": "World of Warcraft",
+    "category": "Gaming",
+    "aliases": [],
+    "website": "https://worldofwarcraft.blizzard.com",
+    "cancelUrl": "https://account.battle.net",
+    "icon": "world-of-warcraft",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.99,
+    "tags": [
+      "gaming",
+      "mmo",
+      "subscription"
+    ]
+  },
+  {
+    "id": "roblox-premium",
+    "name": "Roblox Premium",
+    "category": "Gaming",
+    "aliases": [],
+    "website": "https://www.roblox.com",
+    "cancelUrl": "https://www.roblox.com/upgrades/payment-methods",
+    "icon": "roblox-premium",
+    "color": "#111827",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "gaming",
+      "subscription",
+      "social"
+    ]
+  },
+  {
+    "id": "final-fantasy-xiv",
+    "name": "Final Fantasy XIV",
+    "category": "Gaming",
+    "aliases": [],
+    "website": "https://www.finalfantasyxiv.com",
+    "cancelUrl": "https://secure.square-enix.com",
+    "icon": "final-fantasy-xiv",
+    "color": "#7C4DFF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12.99,
+    "tags": [
+      "gaming",
+      "mmo",
+      "subscription"
+    ]
+  },
+  {
+    "id": "apple-arcade",
+    "name": "Apple Arcade",
+    "category": "Gaming",
+    "aliases": [],
+    "website": "https://www.apple.com/apple-arcade",
+    "cancelUrl": "https://apps.apple.com/account/subscriptions",
+    "icon": "apple-arcade",
+    "color": "#A3AAAE",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 6.99,
+    "tags": [
+      "gaming",
+      "subscription",
+      "mobile"
+    ]
+  },
+  {
+    "id": "google-play-pass",
+    "name": "Google Play Pass",
+    "category": "Gaming",
+    "aliases": [],
+    "website": "https://play.google.com/about/play-pass",
+    "cancelUrl": "https://play.google.com/store/account/subscriptions",
+    "icon": "google-play-pass",
+    "color": "#34A853",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "gaming",
+      "subscription",
+      "mobile"
+    ]
+  },
+  {
+    "id": "humble-choice",
+    "name": "Humble Choice",
+    "category": "Gaming",
+    "aliases": [],
+    "website": "https://www.humblebundle.com/membership",
+    "cancelUrl": "https://www.humblebundle.com/user/settings/subscriptions",
+    "icon": "humble-choice",
+    "color": "#EF4444",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 11.99,
+    "tags": [
+      "gaming",
+      "subscription",
+      "pc"
+    ]
+  },
+  {
+    "id": "nordvpn",
+    "name": "NordVPN",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://nordvpn.com",
+    "cancelUrl": "https://my.nordaccount.com/billing",
+    "icon": "nordvpn",
+    "color": "#4687FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12.99,
+    "tags": [
+      "security",
+      "vpn",
+      "privacy"
+    ]
+  },
+  {
+    "id": "expressvpn",
+    "name": "ExpressVPN",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://www.expressvpn.com",
+    "cancelUrl": "https://www.expressvpn.com/subscriptions",
+    "cancelUrlType": "billing_page",
+    "icon": "expressvpn",
+    "color": "#E11D48",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12.95,
+    "tags": [
+      "security",
+      "vpn",
+      "privacy"
+    ]
+  },
+  {
+    "id": "surfshark",
+    "name": "Surfshark",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://surfshark.com",
+    "cancelUrl": "https://my.surfshark.com/account/subscription",
+    "cancelUrlType": "billing_page",
+    "icon": "surfshark",
+    "color": "#00B6D3",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12.95,
+    "tags": [
+      "security",
+      "vpn",
+      "privacy"
+    ]
+  },
+  {
+    "id": "protonvpn",
+    "name": "ProtonVPN",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://protonvpn.com",
+    "cancelUrl": "https://account.proton.me/u/0/mail/account-dashboard",
+    "icon": "protonvpn",
+    "color": "#7C3AED",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "security",
+      "vpn",
+      "privacy"
+    ]
+  },
+  {
+    "id": "proton-pass",
+    "name": "Proton Pass",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://proton.me/pass",
+    "cancelUrl": "https://account.proton.me/u/0/mail/account-dashboard",
+    "icon": "proton-pass",
+    "color": "#6D28D9",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "security",
+      "passwords",
+      "privacy"
+    ]
+  },
+  {
+    "id": "dashlane",
+    "name": "Dashlane",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://www.dashlane.com",
+    "cancelUrl": "https://www.dashlane.com/account/subscription",
+    "icon": "dashlane",
+    "color": "#0EA5E9",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "security",
+      "passwords",
+      "privacy"
+    ]
+  },
+  {
+    "id": "keeper",
+    "name": "Keeper",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://www.keepersecurity.com",
+    "cancelUrl": "https://keepersecurity.com/account.html",
+    "icon": "keeper",
+    "color": "#F97316",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "security",
+      "passwords",
+      "privacy"
+    ]
+  },
+  {
+    "id": "lastpass",
+    "name": "LastPass",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://www.lastpass.com",
+    "cancelUrl": "https://lastpass.com/account.php",
+    "icon": "lastpass",
+    "color": "#D32D27",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 3,
+    "tags": [
+      "security",
+      "passwords",
+      "privacy"
+    ]
+  },
+  {
+    "id": "malwarebytes",
+    "name": "Malwarebytes",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://www.malwarebytes.com",
+    "cancelUrl": "https://my.malwarebytes.com",
+    "icon": "malwarebytes",
+    "color": "#0057FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "security",
+      "antivirus",
+      "privacy"
+    ]
+  },
+  {
+    "id": "mcafee",
+    "name": "McAfee",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://www.mcafee.com",
+    "cancelUrl": "https://home.mcafee.com",
+    "icon": "mcafee",
+    "color": "#C01818",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8.99,
+    "tags": [
+      "security",
+      "antivirus",
+      "privacy"
+    ]
+  },
+  {
+    "id": "norton-360",
+    "name": "Norton 360",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://us.norton.com",
+    "cancelUrl": "https://my.norton.com",
+    "icon": "norton-360",
+    "color": "#FFD400",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "security",
+      "antivirus",
+      "privacy"
+    ]
+  },
+  {
+    "id": "aura",
+    "name": "Aura",
+    "category": "VPN & Security",
+    "aliases": [],
+    "website": "https://www.aura.com",
+    "cancelUrl": "https://my.aura.com",
+    "icon": "aura",
+    "color": "#8B5CF6",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12,
+    "tags": [
+      "security",
+      "privacy",
+      "identity"
+    ]
+  },
+  {
+    "id": "amazon_prime",
+    "name": "Amazon Prime",
+    "category": "Shopping & Delivery",
+    "aliases": [
+      "prime",
+      "amazon",
+      "amazon membership",
+      "prime video"
+    ],
+    "website": "https://www.amazon.com",
+    "cancelUrl": "https://www.amazon.com/gp/primecentral",
+    "icon": "shopping",
+    "color": "#00A8E1",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.99,
+    "tags": [
+      "shopping",
+      "delivery",
+      "video",
+      "amazon"
+    ]
+  },
+  {
+    "id": "instacart-plus",
+    "name": "Instacart+",
+    "category": "Shopping & Delivery",
+    "aliases": [
+      "instacart plus"
+    ],
+    "website": "https://www.instacart.com",
+    "cancelUrl": "https://www.instacart.com/account",
+    "icon": "instacart-plus",
+    "color": "#43B02A",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "shopping",
+      "delivery",
+      "groceries"
+    ]
+  },
+  {
+    "id": "walmart-plus",
+    "name": "Walmart+",
+    "category": "Shopping & Delivery",
+    "aliases": [
+      "walmart plus"
+    ],
+    "website": "https://www.walmart.com/plus",
+    "cancelUrl": "https://www.walmart.com/account/plus",
+    "icon": "walmart-plus",
+    "color": "#0071CE",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12.95,
+    "tags": [
+      "shopping",
+      "delivery",
+      "membership"
+    ]
+  },
+  {
+    "id": "dashpass",
+    "name": "DoorDash DashPass",
+    "category": "Shopping & Delivery",
+    "aliases": [
+      "doordash dashpass"
+    ],
+    "website": "https://www.doordash.com/dashpass",
+    "cancelUrl": "https://www.doordash.com/account/subscriptions",
+    "icon": "dashpass",
+    "color": "#FF3008",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "delivery",
+      "food",
+      "shopping"
+    ]
+  },
+  {
+    "id": "uber-one",
+    "name": "Uber One",
+    "category": "Shopping & Delivery",
+    "aliases": [],
+    "website": "https://www.uber.com/us/en/u/uber-one",
+    "cancelUrl": "https://riders.uber.com/trips",
+    "icon": "uber-one",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "delivery",
+      "rides",
+      "shopping"
+    ]
+  },
+  {
+    "id": "wolt-plus",
+    "name": "Wolt+",
+    "category": "Shopping & Delivery",
+    "aliases": [],
+    "website": "https://wolt.com",
+    "cancelUrl": "https://wolt.com/en/account",
+    "icon": "wolt-plus",
+    "color": "#00C2E8",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 7.99,
+    "tags": [
+      "delivery",
+      "food",
+      "shopping"
+    ]
+  },
+  {
+    "id": "bolt-plus",
+    "name": "Bolt Plus",
+    "category": "Shopping & Delivery",
+    "aliases": [],
+    "website": "https://bolt.eu",
+    "cancelUrl": "https://bolt.eu/en/account",
+    "icon": "bolt-plus",
+    "color": "#32D74B",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 5.99,
+    "tags": [
+      "delivery",
+      "rides",
+      "shopping"
+    ]
+  },
+  {
+    "id": "deliveroo-plus",
+    "name": "Deliveroo Plus",
+    "category": "Shopping & Delivery",
+    "aliases": [],
+    "website": "https://deliveroo.co.uk",
+    "cancelUrl": "https://deliveroo.co.uk/account",
+    "icon": "deliveroo-plus",
+    "color": "#00CCBC",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "delivery",
+      "food",
+      "shopping"
+    ]
+  },
+  {
+    "id": "grubhub-plus",
+    "name": "Grubhub+",
+    "category": "Shopping & Delivery",
+    "aliases": [],
+    "website": "https://www.grubhub.com",
+    "cancelUrl": "https://www.grubhub.com/account",
+    "icon": "grubhub-plus",
+    "color": "#F63440",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "delivery",
+      "food",
+      "shopping"
+    ]
+  },
+  {
+    "id": "just-eat-plus",
+    "name": "Just Eat Plus",
+    "category": "Shopping & Delivery",
+    "aliases": [],
+    "website": "https://www.just-eat.com",
+    "cancelUrl": "https://www.just-eat.com/account",
+    "icon": "just-eat-plus",
+    "color": "#FF8000",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 5.99,
+    "tags": [
+      "delivery",
+      "food",
+      "shopping"
+    ]
+  },
+  {
+    "id": "thrive-market",
+    "name": "Thrive Market",
+    "category": "Shopping & Delivery",
+    "aliases": [],
+    "website": "https://thrivemarket.com",
+    "cancelUrl": "https://thrivemarket.com/account",
+    "icon": "thrive-market",
+    "color": "#16A34A",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12,
+    "tags": [
+      "shopping",
+      "membership",
+      "groceries"
+    ]
+  },
+  {
+    "id": "gopuff-fam",
+    "name": "Gopuff Fam",
+    "category": "Shopping & Delivery",
+    "aliases": [
+      "gopuff fam"
+    ],
+    "website": "https://www.gopuff.com",
+    "cancelUrl": "https://www.gopuff.com/account",
+    "icon": "gopuff-fam",
+    "color": "#4F46E5",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 7.99,
+    "tags": [
+      "delivery",
+      "shopping",
+      "groceries"
+    ]
+  },
+  {
+    "id": "quickbooks",
+    "name": "Finance & Business",
+    "category": "https://quickbooks.intuit.com",
+    "aliases": [],
+    "website": "https://accounts.intuit.com",
+    "cancelUrl": "quickbooks",
+    "icon": "#2CA01C",
+    "color": 30,
+    "commonBilling": "monthly",
+    "averageMonthlyCost": [
+      "finance",
+      "accounting",
+      "business"
+    ]
+  },
+  {
+    "id": "ynab",
+    "name": "YNAB",
+    "category": "Finance & Business",
+    "aliases": [],
+    "website": "https://www.ynab.com",
+    "cancelUrl": "https://app.ynab.com/settings/subscription",
+    "icon": "ynab",
+    "color": "#3B82F6",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.99,
+    "tags": [
+      "finance",
+      "budgeting",
+      "money"
+    ]
+  },
+  {
+    "id": "rocket-money",
+    "name": "Rocket Money",
+    "category": "Finance & Business",
+    "aliases": [],
+    "website": "https://www.rocketmoney.com",
+    "cancelUrl": "https://app.rocketmoney.com/settings",
+    "icon": "rocket-money",
+    "color": "#10B981",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "finance",
+      "subscriptions",
+      "budgeting"
+    ]
+  },
+  {
+    "id": "monarch-money",
+    "name": "Monarch Money",
+    "category": "Finance & Business",
+    "aliases": [],
+    "website": "https://www.monarchmoney.com",
+    "cancelUrl": "https://app.monarchmoney.com/settings/billing",
+    "icon": "monarch-money",
+    "color": "#7C3AED",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.99,
+    "tags": [
+      "finance",
+      "budgeting",
+      "money"
+    ]
+  },
+  {
+    "id": "tradingview",
+    "name": "TradingView",
+    "category": "Finance & Business",
+    "aliases": [],
+    "website": "https://www.tradingview.com",
+    "cancelUrl": "https://www.tradingview.com/gopro",
+    "icon": "tradingview",
+    "color": "#2962FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 14.95,
+    "tags": [
+      "finance",
+      "investing",
+      "charts"
+    ]
+  },
+  {
+    "id": "xero",
+    "name": "Xero",
+    "category": "Finance & Business",
+    "aliases": [],
+    "website": "https://www.xero.com",
+    "cancelUrl": "https://go.xero.com/Subscription",
+    "icon": "xero",
+    "color": "#13B5EA",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15,
+    "tags": [
+      "finance",
+      "accounting",
+      "business"
+    ]
+  },
+  {
+    "id": "quicken-simplifi",
+    "name": "Quicken Simplifi",
+    "category": "Finance & Business",
+    "aliases": [],
+    "website": "https://www.quicken.com/simplifi",
+    "cancelUrl": "https://www.quicken.com/my-account",
+    "icon": "quicken-simplifi",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 5.99,
+    "tags": [
+      "finance",
+      "budgeting",
+      "money"
+    ]
+  },
+  {
+    "id": "freshbooks",
+    "name": "FreshBooks",
+    "category": "Finance & Business",
+    "aliases": [],
+    "website": "https://www.freshbooks.com",
+    "cancelUrl": "https://my.freshbooks.com/#/settings/subscription",
+    "icon": "freshbooks",
+    "color": "#0369A1",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 19,
+    "tags": [
+      "finance",
+      "accounting",
+      "business"
+    ]
+  },
+  {
+    "id": "sage",
+    "name": "Sage",
+    "category": "Finance & Business",
+    "aliases": [],
+    "website": "https://www.sage.com",
+    "cancelUrl": "https://www.sage.com/en-us/my-account",
+    "icon": "sage",
+    "color": "#00DC82",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15,
+    "tags": [
+      "finance",
+      "accounting",
+      "business"
+    ]
+  },
+  {
+    "id": "wave-pro",
+    "name": "Wave Pro",
+    "category": "Finance & Business",
+    "aliases": [],
+    "website": "https://www.waveapps.com",
+    "cancelUrl": "https://my.waveapps.com/settings",
+    "icon": "wave-pro",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 16,
+    "tags": [
+      "finance",
+      "accounting",
+      "business"
+    ]
+  },
+  {
+    "id": "zoho-books",
+    "name": "Zoho Books",
+    "category": "Finance & Business",
+    "aliases": [],
+    "website": "https://www.zoho.com/books",
+    "cancelUrl": "https://accounts.zoho.com",
+    "icon": "zoho-books",
+    "color": "#EF4444",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15,
+    "tags": [
+      "finance",
+      "accounting",
+      "business"
+    ]
+  },
+  {
+    "id": "rippling",
+    "name": "Rippling",
+    "category": "Finance & Business",
+    "aliases": [],
+    "website": "https://www.rippling.com",
+    "cancelUrl": "https://app.rippling.com",
+    "icon": "rippling",
+    "color": "#111827",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 35,
+    "tags": [
+      "business",
+      "payroll",
+      "finance"
+    ]
+  },
+  {
+    "id": "patreon",
+    "name": "Patreon",
+    "category": "Social / Creator",
+    "aliases": [],
+    "website": "https://www.patreon.com",
+    "cancelUrl": "https://www.patreon.com/settings/memberships",
+    "icon": "patreon",
+    "color": "#FF424D",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10,
+    "tags": [
+      "creator",
+      "social",
+      "membership"
+    ]
+  },
+  {
+    "id": "substack",
+    "name": "Substack",
+    "category": "Social / Creator",
+    "aliases": [],
+    "website": "https://substack.com",
+    "cancelUrl": "https://substack.com/settings",
+    "cancelUrlType": "billing_page",
+    "icon": "substack",
+    "color": "#FF6719",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8,
+    "tags": [
+      "creator",
+      "newsletter",
+      "social"
+    ]
+  },
+  {
+    "id": "onlyfans",
+    "name": "OnlyFans",
+    "category": "Social / Creator",
+    "aliases": [],
+    "website": "https://onlyfans.com",
+    "cancelUrl": "https://onlyfans.com/my/subscriptions",
+    "icon": "onlyfans",
+    "color": "#00AFF0",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10,
+    "tags": [
+      "creator",
+      "social",
+      "membership"
+    ]
+  },
+  {
+    "id": "linkedin-premium",
+    "name": "LinkedIn Premium",
+    "category": "Social / Creator",
+    "aliases": [],
+    "website": "https://www.linkedin.com/premium",
+    "cancelUrl": "https://www.linkedin.com/mypremium",
+    "icon": "linkedin-premium",
+    "color": "#0A66C2",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 39.99,
+    "tags": [
+      "career",
+      "social",
+      "premium"
+    ]
+  },
+  {
+    "id": "x-premium",
+    "name": "X Premium",
+    "category": "Social / Creator",
+    "aliases": [
+      "twitter premium",
+      "x blue"
+    ],
+    "website": "https://x.com",
+    "cancelUrl": "https://x.com/settings/premium",
+    "icon": "x-premium",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8,
+    "tags": [
+      "social",
+      "premium",
+      "creator"
+    ]
+  },
+  {
+    "id": "discord-nitro",
+    "name": "Discord Nitro",
+    "category": "Social / Creator",
+    "aliases": [],
+    "website": "https://discord.com/nitro",
+    "cancelUrl": "https://discord.com/billing",
+    "icon": "discord-nitro",
+    "color": "#5865F2",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "social",
+      "gaming",
+      "creator"
+    ]
+  },
+  {
+    "id": "youtube-membership",
+    "name": "YouTube Memberships",
+    "category": "Social / Creator",
+    "aliases": [],
+    "website": "https://www.youtube.com",
+    "cancelUrl": "https://www.youtube.com/paid_memberships",
+    "icon": "youtube-membership",
+    "color": "#FF0000",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "creator",
+      "social",
+      "membership"
+    ]
+  },
+  {
+    "id": "twitch-turbo",
+    "name": "Twitch Turbo",
+    "category": "Social / Creator",
+    "aliases": [],
+    "website": "https://www.twitch.tv/turbo",
+    "cancelUrl": "https://www.twitch.tv/subscriptions",
+    "icon": "twitch-turbo",
+    "color": "#9146FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 11.99,
+    "tags": [
+      "creator",
+      "streaming",
+      "social"
+    ]
+  },
+  {
+    "id": "behance-pro",
+    "name": "Behance Pro",
+    "category": "Social / Creator",
+    "aliases": [],
+    "website": "https://www.behance.net",
+    "cancelUrl": "https://account.adobe.com/plans",
+    "icon": "behance-pro",
+    "color": "#1769FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "creator",
+      "portfolio",
+      "social"
+    ]
+  },
+  {
+    "id": "ko-fi-gold",
+    "name": "Ko-fi Gold",
+    "category": "Social / Creator",
+    "aliases": [],
+    "website": "https://ko-fi.com",
+    "cancelUrl": "https://ko-fi.com/manage",
+    "icon": "ko-fi-gold",
+    "color": "#13C3FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 6,
+    "tags": [
+      "creator",
+      "social",
+      "membership"
+    ]
+  },
+  {
+    "id": "new-york-times",
+    "name": "New York Times",
+    "category": "News & Media",
+    "aliases": [],
+    "website": "https://www.nytimes.com",
+    "cancelUrl": "https://myaccount.nytimes.com/seg",
+    "cancelUrlType": "billing_page",
+    "icon": "new-york-times",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 25,
+    "tags": [
+      "news",
+      "media",
+      "reading"
+    ]
+  },
+  {
+    "id": "wall-street-journal",
+    "name": "Wall Street Journal",
+    "category": "News & Media",
+    "aliases": [],
+    "website": "https://www.wsj.com",
+    "cancelUrl": "https://www.wsj.com/account",
+    "icon": "wall-street-journal",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 38.99,
+    "tags": [
+      "news",
+      "media",
+      "finance"
+    ]
+  },
+  {
+    "id": "the-economist",
+    "name": "The Economist",
+    "category": "News & Media",
+    "aliases": [],
+    "website": "https://www.economist.com",
+    "cancelUrl": "https://my.economist.com",
+    "cancelUrlType": "billing_page",
+    "icon": "the-economist",
+    "color": "#E3120B",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 19.99,
+    "tags": [
+      "news",
+      "media",
+      "reading"
+    ]
+  },
+  {
+    "id": "medium",
+    "name": "Medium",
+    "category": "News & Media",
+    "aliases": [],
+    "website": "https://medium.com",
+    "cancelUrl": "https://medium.com/me/membership",
+    "icon": "medium",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 5,
+    "tags": [
+      "news",
+      "reading",
+      "media"
+    ]
+  },
+  {
+    "id": "blinkist",
+    "name": "Blinkist",
+    "category": "News & Media",
+    "aliases": [],
+    "website": "https://www.blinkist.com",
+    "cancelUrl": "https://www.blinkist.com/en/nc/account",
+    "icon": "blinkist",
+    "color": "#2CE080",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15.99,
+    "tags": [
+      "books",
+      "reading",
+      "media"
+    ]
+  },
+  {
+    "id": "the-athletic",
+    "name": "The Athletic",
+    "category": "News & Media",
+    "aliases": [],
+    "website": "https://theathletic.com",
+    "cancelUrl": "https://theathletic.com/settings",
+    "icon": "the-athletic",
+    "color": "#FBBF24",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 7.99,
+    "tags": [
+      "sports",
+      "news",
+      "media"
+    ]
+  },
+  {
+    "id": "washington-post",
+    "name": "The Washington Post",
+    "category": "News & Media",
+    "aliases": [],
+    "website": "https://www.washingtonpost.com",
+    "cancelUrl": "https://subscribe.washingtonpost.com/profile",
+    "icon": "washington-post",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12,
+    "tags": [
+      "news",
+      "media",
+      "reading"
+    ]
+  },
+  {
+    "id": "financial-times",
+    "name": "Financial Times",
+    "category": "News & Media",
+    "aliases": [],
+    "website": "https://www.ft.com",
+    "cancelUrl": "https://www.ft.com/manageaccount",
+    "icon": "financial-times",
+    "color": "#FCD0B1",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 40,
+    "tags": [
+      "news",
+      "media",
+      "finance"
+    ]
+  },
+  {
+    "id": "the-atlantic",
+    "name": "The Atlantic",
+    "category": "News & Media",
+    "aliases": [],
+    "website": "https://www.theatlantic.com",
+    "cancelUrl": "https://accounts.theatlantic.com",
+    "icon": "the-atlantic",
+    "color": "#D97706",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 7.99,
+    "tags": [
+      "news",
+      "media",
+      "reading"
+    ]
+  },
+  {
+    "id": "pressreader",
+    "name": "PressReader",
+    "category": "News & Media",
+    "aliases": [],
+    "website": "https://www.pressreader.com",
+    "cancelUrl": "https://www.pressreader.com/account",
+    "icon": "pressreader",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 29.99,
+    "tags": [
+      "news",
+      "media",
+      "reading"
+    ]
+  },
+  {
+    "id": "vercel-pro",
+    "name": "Vercel Pro",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://vercel.com",
+    "cancelUrl": "https://vercel.com/account/billing",
+    "cancelUrlType": "billing_page",
+    "icon": "vercel-pro",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 20,
+    "tags": [
+      "developer",
+      "hosting",
+      "software"
+    ]
+  },
+  {
+    "id": "netlify-pro",
+    "name": "Netlify Pro",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://www.netlify.com",
+    "cancelUrl": "https://app.netlify.com/account/billing",
+    "icon": "netlify-pro",
+    "color": "#00C7B7",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 19,
+    "tags": [
+      "developer",
+      "hosting",
+      "software"
+    ]
+  },
+  {
+    "id": "render",
+    "name": "Render",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://render.com",
+    "cancelUrl": "https://dashboard.render.com/billing",
+    "icon": "render",
+    "color": "#46E3B7",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 25,
+    "tags": [
+      "developer",
+      "hosting",
+      "cloud"
+    ]
+  },
+  {
+    "id": "digitalocean",
+    "name": "DigitalOcean",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://www.digitalocean.com",
+    "cancelUrl": "https://cloud.digitalocean.com/account/billing",
+    "icon": "digitalocean",
+    "color": "#0080FF",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 15,
+    "tags": [
+      "developer",
+      "cloud",
+      "hosting"
+    ]
+  },
+  {
+    "id": "aws",
+    "name": "AWS",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://aws.amazon.com",
+    "cancelUrl": "https://console.aws.amazon.com/billing",
+    "icon": "aws",
+    "color": "#FF9900",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 25,
+    "tags": [
+      "developer",
+      "cloud",
+      "hosting"
+    ]
+  },
+  {
+    "id": "openai-api",
+    "name": "OpenAI API",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://platform.openai.com",
+    "cancelUrl": "https://platform.openai.com/settings/organization/billing/overview",
+    "cancelUrlType": "billing_page",
+    "icon": "openai-api",
+    "color": "#10A37F",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 25,
+    "tags": [
+      "developer",
+      "ai",
+      "api"
+    ]
+  },
+  {
+    "id": "supabase-pro",
+    "name": "Supabase Pro",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://supabase.com",
+    "cancelUrl": "https://supabase.com/dashboard/project/_/settings/billing",
+    "cancelUrlType": "billing_page",
+    "icon": "supabase-pro",
+    "color": "#3ECF8E",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 25,
+    "tags": [
+      "developer",
+      "database",
+      "hosting"
+    ]
+  },
+  {
+    "id": "linear",
+    "name": "Linear",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://linear.app",
+    "cancelUrl": "https://linear.app/settings/billing",
+    "icon": "linear",
+    "color": "#5E6AD2",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 8,
+    "tags": [
+      "developer",
+      "project management",
+      "software"
+    ]
+  },
+  {
+    "id": "postman-pro",
+    "name": "Postman Pro",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://www.postman.com",
+    "cancelUrl": "https://go.postman.co/settings/billing",
+    "icon": "postman-pro",
+    "color": "#FF6C37",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 12,
+    "tags": [
+      "developer",
+      "api",
+      "software"
+    ]
+  },
+  {
+    "id": "railway",
+    "name": "Railway",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://railway.app",
+    "cancelUrl": "https://railway.app/account/billing",
+    "icon": "railway",
+    "color": "#7C3AED",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 20,
+    "tags": [
+      "developer",
+      "hosting",
+      "cloud"
+    ]
+  },
+  {
+    "id": "cloudflare-pro",
+    "name": "Cloudflare Pro",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://www.cloudflare.com",
+    "cancelUrl": "https://dash.cloudflare.com/profile/billing",
+    "icon": "cloudflare-pro",
+    "color": "#F48120",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 20,
+    "tags": [
+      "developer",
+      "hosting",
+      "security"
+    ]
+  },
+  {
+    "id": "sentry-team",
+    "name": "Sentry Team",
+    "category": "Developer Tools",
+    "aliases": [],
+    "website": "https://sentry.io",
+    "cancelUrl": "https://sentry.io/settings/account/billing/",
+    "icon": "sentry-team",
+    "color": "#362D59",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 26,
+    "tags": [
+      "developer",
+      "monitoring",
+      "software"
+    ]
+  },
+  {
+    "id": "google-workspace",
+    "name": "Google Workspace",
+    "category": "Utilities",
+    "aliases": [],
+    "website": "https://workspace.google.com",
+    "cancelUrl": "https://admin.google.com/ac/billing",
+    "icon": "google-workspace",
+    "color": "#4285F4",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 6,
+    "tags": [
+      "email",
+      "productivity",
+      "utility"
+    ]
+  },
+  {
+    "id": "proton-mail",
+    "name": "Proton Mail",
+    "category": "Utilities",
+    "aliases": [],
+    "website": "https://proton.me/mail",
+    "cancelUrl": "https://account.proton.me/u/0/mail/account-dashboard",
+    "icon": "proton-mail",
+    "color": "#6D28D9",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 4.99,
+    "tags": [
+      "email",
+      "privacy",
+      "utility"
+    ]
+  },
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "category": "Utilities",
+    "aliases": [],
+    "website": "https://zapier.com",
+    "cancelUrl": "https://zapier.com/app/billing",
+    "icon": "zapier",
+    "color": "#FF4A00",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 29.99,
+    "tags": [
+      "automation",
+      "utility",
+      "software"
+    ]
+  },
+  {
+    "id": "ifttt",
+    "name": "IFTTT",
+    "category": "Utilities",
+    "aliases": [],
+    "website": "https://ifttt.com",
+    "cancelUrl": "https://ifttt.com/subscriptions",
+    "icon": "ifttt",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 3.99,
+    "tags": [
+      "automation",
+      "utility",
+      "software"
+    ]
+  },
+  {
+    "id": "make-com",
+    "name": "Make",
+    "category": "Utilities",
+    "aliases": [
+      "integromat",
+      "make"
+    ],
+    "website": "https://www.make.com",
+    "cancelUrl": "https://www.make.com/en/billing",
+    "icon": "make-com",
+    "color": "#7C3AED",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 10.59,
+    "tags": [
+      "automation",
+      "utility",
+      "software"
+    ]
+  },
+  {
+    "id": "proton-family",
+    "name": "Proton Family",
+    "category": "Utilities",
+    "aliases": [],
+    "website": "https://proton.me/family",
+    "cancelUrl": "https://account.proton.me/u/0/mail/account-dashboard",
+    "icon": "proton-family",
+    "color": "#7C3AED",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 29.99,
+    "tags": [
+      "email",
+      "privacy",
+      "utility"
+    ]
+  },
+  {
+    "id": "fastmail",
+    "name": "Fastmail",
+    "category": "Utilities",
+    "aliases": [],
+    "website": "https://www.fastmail.com",
+    "cancelUrl": "https://www.fastmail.com/settings/account",
+    "icon": "fastmail",
+    "color": "#2563EB",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 5,
+    "tags": [
+      "email",
+      "utility",
+      "productivity"
+    ]
+  },
+  {
+    "id": "mailchimp",
+    "name": "Mailchimp",
+    "category": "Utilities",
+    "aliases": [],
+    "website": "https://mailchimp.com",
+    "cancelUrl": "https://login.mailchimp.com/account/billing/",
+    "icon": "mailchimp",
+    "color": "#FFE01B",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 13,
+    "tags": [
+      "email",
+      "marketing",
+      "utility"
+    ]
+  },
+  {
+    "id": "typeform",
+    "name": "Typeform",
+    "category": "Utilities",
+    "aliases": [],
+    "website": "https://www.typeform.com",
+    "cancelUrl": "https://admin.typeform.com/account/billing",
+    "icon": "typeform",
+    "color": "#111111",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 29,
+    "tags": [
+      "forms",
+      "utility",
+      "software"
+    ]
+  },
+  {
+    "id": "buffer",
+    "name": "Buffer",
+    "category": "Utilities",
+    "aliases": [],
+    "website": "https://buffer.com",
+    "cancelUrl": "https://buffer.com/account/billing",
+    "icon": "buffer",
+    "color": "#231F20",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 6,
+    "tags": [
+      "social",
+      "utility",
+      "software"
+    ]
+  },
+  {
+    "id": "house-rent",
+    "name": "House Rent",
+    "category": "Housing",
+    "aliases": [
+      "rent",
+      "apartment rent",
+      "house rent"
+    ],
+    "website": "",
+    "cancelUrl": "",
+    "icon": "house-rent",
+    "color": "#8B5CF6",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 0,
+    "tags": [
+      "housing",
+      "rent",
+      "home"
+    ]
+  },
+  {
+    "id": "just-eat",
+    "name": "Just Eat",
+    "category": "Shopping & Delivery",
+    "aliases": [
+      "just eat",
+      "justeat",
+      "just eat takeaway"
+    ],
+    "website": "https://www.justeat.com",
+    "cancelUrl": "https://www.justeat.com/account",
+    "icon": "justeat",
+    "color": "#FF5A00",
+    "commonBilling": "monthly",
+    "averageMonthlyCost": 9.99,
+    "tags": [
+      "delivery",
+      "food",
+      "shopping"
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+{"flutter":{"platforms":{"android":{"default":{"projectId":"bizoot-app","appId":"1:311435914370:android:b9f818736c6f67dd5f189b","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"bizoot-app","configurations":{"android":"1:311435914370:android:b9f818736c6f67dd5f189b","ios":"1:311435914370:ios:624beb8aca4db1065f189b"}}}}}}

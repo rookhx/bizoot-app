@@ -1,0 +1,182 @@
+{
+  "@@locale": "es",
+  "appName": "Bizoot",
+  "dashboard": "Panel",
+  "calendar": "Calendario",
+  "subscriptions": "Suscripciones",
+  "reports": "Informes",
+  "settings": "Configuración",
+  "premium": "Premium",
+  "authWelcomeBack": "Bienvenido de nuevo",
+  "authCreateAccount": "Crea tu cuenta de Bizoot",
+  "authWelcomeSubtitle": "Inicia sesión para ver lo que tus gastos fijos realmente le hacen a tu mes.",
+  "authCreateSubtitle": "Crea tu cuenta y reúne cada cargo recurrente en un centro de control premium.",
+  "authHero": "Deja de perder dinero en suscripciones olvidadas.",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+  "logIn": "Iniciar sesión",
+  "createAccount": "Crear cuenta",
+  "enterEmailPassword": "Introduce tu correo y tu contraseña para continuar.",
+  "alreadyHaveAccount": "¿Ya tienes una cuenta? Inicia sesión",
+  "needAccount": "¿Necesitas una cuenta? Regístrate",
+  "onboardingStep": "Paso {current} de {total}",
+  "@onboardingStep": {
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "back": "Atrás",
+  "continueLabel": "Continuar",
+  "finishSetup": "Finalizar configuración",
+  "finishingSetup": "Finalizando configuración...",
+  "fullNameAndCountryRequired": "El nombre completo y el país son obligatorios.",
+  "validCountryRequired": "Selecciona un país válido de la lista.",
+  "profileSetup": "Configuración del perfil",
+  "profileSetupSubtitle": "Vamos a personalizar Bizoot antes de empezar a seguir tus gastos recurrentes.",
+  "tapChooseProfilePicture": "Toca para elegir una foto de perfil",
+  "profilePictureSelected": "Foto de perfil seleccionada",
+  "opensPhoneGallery": "Abre la galería de tu teléfono",
+  "fullName": "Nombre completo",
+  "phoneNumberOptional": "Número de teléfono (opcional)",
+  "country": "País",
+  "financialSetup": "Configuración financiera",
+  "financialSetupSubtitle": "Elige la configuración monetaria que Bizoot debe usar en tu panel, insights y recordatorios.",
+  "currency": "Moneda",
+  "currencyAutoSelected": "Se selecciona automáticamente según el país que elijas.",
+  "monthlyIncome": "Ingresos mensuales",
+  "monthlyIncomeHelper": "Opcional, pero recomendable para Health Score y gasto seguro.",
+  "mainFinancialGoal": "Objetivo financiero principal",
+  "estimatedSubscriptions": "Suscripciones estimadas",
+  "estimatedSubscriptionsLabel": "{count} suscripciones",
+  "@estimatedSubscriptionsLabel": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "goalSaveMoney": "Ahorrar dinero",
+  "goalTrackBills": "Controlar facturas",
+  "goalAvoidSurpriseCharges": "Evitar cargos sorpresa",
+  "goalCancelUnusedSubscriptions": "Cancelar suscripciones no usadas",
+  "settingsSyncing": "Guardando tus últimos cambios de Bizoot...",
+  "settingsOffline": "Modo sin conexión activo. Tus cambios están seguros y continuarán cuando vuelvas a conectarte.",
+  "settingsPendingChanges": "Algunos cambios recientes aún se están guardando.",
+  "settingsReady": "Aquí viven tus ajustes de cuenta, recordatorios, privacidad y soporte.",
+  "notifications": "Notificaciones",
+  "language": "Idioma",
+  "languageDescription": "Elige el idioma que Bizoot debe usar en toda la app.",
+  "languageEnglish": "English",
+  "languageDanish": "Dansk",
+  "languageGerman": "Deutsch",
+  "languageSpanish": "Español",
+  "languageUpdated": "Idioma actualizado.",
+  "notificationPreferencesUpdated": "Preferencias de notificaciones actualizadas.",
+  "notificationPreferencesFailed": "No pudimos actualizar tus preferencias de notificaciones ahora mismo.",
+  "signOutQuestion": "¿Cerrar sesión en Bizoot?",
+  "signOutBody": "Volverás a la pantalla de inicio de sesión y tus datos sincronizados seguirán vinculados a tu cuenta.",
+  "staySignedIn": "Seguir conectado",
+  "signOut": "Cerrar sesión",
+  "openPhoneNotificationSettings": "Abrir ajustes de notificaciones del teléfono",
+  "paymentReminders": "Recordatorios de pago",
+  "paymentRemindersSubtitle": "Recordatorios para tus suscripciones activas que vencen mañana o pronto.",
+  "weeklySummaries": "Resúmenes semanales",
+  "weeklySummariesSubtitle": "Resúmenes del domingo por la noche con renovaciones y totales de la próxima semana.",
+  "trialAlerts": "Alertas de prueba",
+  "trialAlertsSubtitle": "Avisos antes de que una prueba gratuita se convierta en una suscripción de pago.",
+  "smartInsights": "Smart insights",
+  "smartInsightsSubtitle": "Sugerencias de ahorro, seguimientos de cancelación y avisos sobre gasto recurrente.",
+  "promotionalNotifications": "Notificaciones promocionales",
+  "promotionalNotificationsSubtitle": "Actualizaciones opcionales del producto, noticias de lanzamientos y anuncios de funciones.",
+  "premiumRequiredSuffix": "{text} Se requiere Premium.",
+  "@premiumRequiredSuffix": {
+    "placeholders": {
+      "text": {}
+    }
+  },
+  "subscriptionPremium": "Suscripción y Premium",
+  "currentPlan": "Plan actual",
+  "trialStatus": "Estado de prueba",
+  "subscriptionUsage": "Uso de suscripción",
+  "whatHappensNow": "Qué ocurre ahora",
+  "planPremium": "Premium",
+  "planTrial": "Prueba de 7 días",
+  "planFree": "Gratis",
+  "premiumUnlocked": "Premium desbloqueado",
+  "trialDaysRemaining": "{days} días restantes",
+  "@trialDaysRemaining": {
+    "placeholders": {
+      "days": {"type": "int"}
+    }
+  },
+  "trialEnded": "Prueba finalizada",
+  "subscriptionsTrackedUnlimited": "{count} suscripciones seguidas • plan ilimitado",
+  "@subscriptionsTrackedUnlimited": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "subscriptionsUsed": "{count} / {limit} suscripciones usadas",
+  "@subscriptionsUsed": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "limit": {"type": "int"}
+    }
+  },
+  "premiumActiveDescription": "Tienes seguimiento ilimitado de suscripciones y todas las funciones premium desbloqueadas.",
+  "trialPremiumDescription": "Tienes todas las funciones premium durante la prueba, con un límite de 5 suscripciones.",
+  "freePlanDescription": "Puedes seguir hasta {limit} suscripciones activas en este plan.",
+  "@freePlanDescription": {
+    "placeholders": {
+      "limit": {"type": "int"}
+    }
+  },
+  "limitReachedDescription": "Límite alcanzado: actualiza para seguimiento ilimitado.",
+  "upgradeToPremium": "Actualizar a Premium",
+  "premiumFeatureComparison": "Comparación de funciones premium",
+  "premiumCompareFree": "Gratis: hasta 5 suscripciones activas, recordatorios básicos y seguimiento esencial",
+  "premiumCompareOne": "Premium: suscripciones ilimitadas, informes avanzados y smart insights",
+  "premiumCompareTwo": "Premium: mejor inteligencia de cancelación, resúmenes semanales e insights más profundos",
+  "privacySecurity": "Privacidad y seguridad",
+  "privacyAiSettings": "Privacidad y ajustes de IA",
+  "privacyAiSubtitle": "Controla los insights de IA y revisa cómo Bizoot protege la información sensible.",
+  "support": "Soporte",
+  "contactSupport": "Contactar con soporte",
+  "contactSupportSubtitle": "Obtén ayuda, informa de un problema o comparte comentarios con el equipo de Bizoot.",
+  "legal": "Legal",
+  "savedServices": "Servicios guardados",
+  "dangerZone": "Zona de riesgo",
+  "logout": "Cerrar sesión",
+  "deleteAccount": "Eliminar cuenta",
+  "savedServicesEmptyTitle": "Aún no hay servicios personalizados",
+  "savedServicesEmptyBody": "Cuando crees una suscripción personalizada con tu propio enlace de cancelación, Bizoot la recordará aquí para un autocompletado más rápido la próxima vez.",
+  "savedServiceUpdated": "Servicio guardado actualizado.",
+  "savedServiceUpdatedFailed": "No pudimos actualizar ese servicio guardado ahora mismo.",
+  "editSavedService": "Editar servicio guardado",
+  "deleteSavedService": "Eliminar servicio guardado",
+  "cancellationUrl": "URL de cancelación",
+  "cancel": "Cancelar",
+  "save": "Guardar",
+  "deleteSavedServiceQuestion": "¿Eliminar servicio guardado?",
+  "deleteSavedServiceBody": "Bizoot olvidará {serviceName} y dejará de sugerirlo desde tu lista personalizada.",
+  "@deleteSavedServiceBody": {
+    "placeholders": {
+      "serviceName": {}
+    }
+  },
+  "savedServiceDeleted": "Servicio guardado eliminado.",
+  "savedServiceDeletedFailed": "No pudimos eliminar ese servicio guardado ahora mismo.",
+  "noSavedCancellationUrl": "Aún no hay URL de cancelación guardada.",
+  "usedTimes": "Usado {count} veces",
+  "@usedTimes": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "debugLocalization": "Depuración de localización",
+  "currentLocale": "Configuración regional actual",
+  "supportedLocalesLabel": "Configuraciones regionales compatibles",
+  "fallbackBehavior": "Comportamiento de reserva",
+  "fallbackBehaviorValue": "Los idiomas del dispositivo no compatibles vuelven al inglés.",
+  "missingTranslationFallbackCount": "Conteo de reserva por traducciones faltantes",
+  "premiumTooltip": "Premium"
+}
