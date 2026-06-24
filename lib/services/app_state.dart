@@ -959,14 +959,23 @@ class AppState extends ChangeNotifier {
   }
 
   Future<SubscriptionActionResult> purchasePremium() async {
+    debugPrint('[purchasePremium] Starting purchase flow');
     subscriptionMessage = null;
     isPurchaseInProgress = true;
     notifyListeners();
     late final SubscriptionActionResult result;
     try {
+      debugPrint('[purchasePremium] Calling purchaseMonthlySubscription');
       result = await subscriptionService.purchaseMonthlySubscription();
+      debugPrint(
+        '[purchasePremium] Result — success:${result.success} cancelled:${result.cancelled} premiumActive:${result.premiumActive} message:${result.message}',
+      );
+
+      debugPrint('[purchasePremium] Syncing premium access from billing');
       await _syncPremiumAccessFromBilling();
       _refreshEntitlements();
+      debugPrint('[purchasePremium] hasPremium after sync: $hasPremium');
+
       notificationPreferences = notificationPreferences.copyWith(
         premiumAccess: hasPremium,
       );
@@ -974,12 +983,20 @@ class AppState extends ChangeNotifier {
         notificationPreferences,
       );
       subscriptionMessage = result.cancelled ? null : result.message;
+
+      debugPrint('[purchasePremium] Syncing smart notifications');
       await _syncSmartNotifications();
       _refreshSyncStatus(
         await syncService.syncAfterSettingsChange(settings.userId),
       );
+      debugPrint('[purchasePremium] Purchase flow completed successfully');
+    } catch (e, stack) {
+      debugPrint('[purchasePremium] ERROR: $e');
+      debugPrint('[purchasePremium] Stack: $stack');
+      rethrow;
     } finally {
       isPurchaseInProgress = false;
+      debugPrint('[purchasePremium] isPurchaseInProgress reset to false');
     }
     notifyListeners();
     return result;

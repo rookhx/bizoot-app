@@ -12,11 +12,11 @@ class AppConfig {
   );
   static const revenueCatIosApiKey = String.fromEnvironment(
     'REVENUECAT_IOS_API_KEY',
-    defaultValue: 'test_tznkszwBXjFFjMFMJurIvYIlsdf',
+    defaultValue: '',
   );
   static const revenueCatAndroidApiKey = String.fromEnvironment(
     'REVENUECAT_ANDROID_API_KEY',
-    defaultValue: 'test_tznkszwBXjFFjMFMJurIvYIlsdf',
+    defaultValue: 'goog_KzlRDsgQhXgeTzwTulJFdkyhAFM',
   );
   static const revenueCatPremiumEntitlement = String.fromEnvironment(
     'REVENUECAT_PREMIUM_ENTITLEMENT',
@@ -30,5 +30,5 @@ class AppConfig {
 
   static bool get isFirebaseConfigured => true;
   static bool get isRevenueCatConfigured =>
-      revenueCatIosApiKey.isNotEmpty && revenueCatAndroidApiKey.isNotEmpty;
+      revenueCatIosApiKey.isNotEmpty || revenueCatAndroidApiKey.isNotEmpty;
 }
