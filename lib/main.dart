@@ -19,12 +19,18 @@ import 'screens/splash_screen.dart';
 import 'screens/subscriptions_screen.dart';
 import 'services/app_state.dart';
 import 'services/auth_service.dart';
+import 'services/connected_email_account_service.dart';
 import 'services/custom_subscription_database_service.dart';
 import 'services/document_storage_service.dart';
+import 'services/email_import_service.dart';
 import 'services/entitlement_service.dart';
+import 'services/gmail_import_service.dart';
+import 'services/gmail_oauth_backend_service.dart';
 import 'services/intelligence_service.dart';
 import 'services/notification_service.dart';
 import 'services/notification_preferences_service.dart';
+import 'services/outlook_import_service.dart';
+import 'services/outlook_oauth_backend_service.dart';
 import 'services/payment_service.dart';
 import 'services/push_notification_service.dart';
 import 'services/settings_service.dart';
@@ -41,6 +47,7 @@ Future<void> main() async {
   await PushNotificationService.ensureFirebaseInitialized();
   FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
   const cloudSyncEnabled = true;
+  const emailImportDeviceOnly = true;
 
   final notificationService = NotificationService();
   final pushNotificationService = PushNotificationService(
@@ -62,6 +69,15 @@ Future<void> main() async {
   final customSubscriptionDatabaseService = CustomSubscriptionDatabaseService(
     cloudSyncEnabled: cloudSyncEnabled,
   );
+  final connectedEmailAccountService = ConnectedEmailAccountService(
+    cloudSyncEnabled: !emailImportDeviceOnly,
+  );
+  final gmailOAuthBackendService = GmailOAuthBackendService(
+    cloudSyncEnabled: !emailImportDeviceOnly,
+  );
+  final outlookOAuthBackendService = OutlookOAuthBackendService(
+    cloudSyncEnabled: !emailImportDeviceOnly,
+  );
 
   final appState = AppState(
     authService: const AuthService(),
@@ -76,6 +92,16 @@ Future<void> main() async {
     userProfileService: userProfileService,
     entitlementService: const EntitlementService(),
     documentStorageService: documentStorageService,
+    emailImportService: EmailImportService(
+      gmailImportService: GmailImportService(
+        accountService: connectedEmailAccountService,
+        backendService: gmailOAuthBackendService,
+      ),
+      outlookImportService: OutlookImportService(
+        accountService: connectedEmailAccountService,
+        backendService: outlookOAuthBackendService,
+      ),
+    ),
     syncService: SyncService(
       cloudSyncEnabled: cloudSyncEnabled,
       userProfileService: userProfileService,

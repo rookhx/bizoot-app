@@ -7,6 +7,8 @@ import '../ai/models/ai_user_context.dart';
 import '../ai/services/ai_orchestrator_service.dart';
 import '../models/custom_subscription_service.dart';
 import '../models/calendar_event.dart';
+import '../models/connected_email_account.dart';
+import '../models/email_scan_summary_result.dart';
 import '../models/insight_event.dart';
 import '../models/notification_preferences.dart';
 import '../models/recurring_payment.dart';
@@ -18,6 +20,7 @@ import '../utils/payment_math.dart';
 import 'auth_service.dart';
 import 'custom_subscription_database_service.dart';
 import 'document_storage_service.dart';
+import 'email_import_service.dart';
 import 'entitlement_service.dart';
 import 'financial_intelligence_service.dart';
 import 'intelligence_service.dart';
@@ -67,6 +70,7 @@ class AppState extends ChangeNotifier {
     required this.userProfileService,
     required this.entitlementService,
     required this.documentStorageService,
+    required this.emailImportService,
     required this.syncService,
   });
 
@@ -82,6 +86,7 @@ class AppState extends ChangeNotifier {
   final UserProfileService userProfileService;
   final EntitlementService entitlementService;
   final DocumentStorageService documentStorageService;
+  final EmailImportService emailImportService;
   final SyncService syncService;
   final SmartNotificationService smartNotificationService =
       const SmartNotificationService();
@@ -120,6 +125,8 @@ class AppState extends ChangeNotifier {
   List<RecurringPayment> payments = [];
   List<UserDocument> documents = [];
   List<CustomSubscriptionService> customServices = [];
+  ConnectedEmailAccount? gmailImportAccount;
+  ConnectedEmailAccount? outlookImportAccount;
   String _aiProviderName = 'Local';
   List<AiInsight> _aiInsights = const [];
   AiUserContext _aiContextPreview = const AiUserContext(
@@ -280,6 +287,8 @@ class AppState extends ChangeNotifier {
         notificationPreferences,
       );
       await _initializePushNotifications(user.id);
+      await _restoreConnectedEmailAccounts(user.id);
+      await _autoSyncConnectedEmailImportsIfEligible();
       await _syncSmartNotifications();
     } else {
       final savedLanguagePreference = await settingsService
@@ -299,6 +308,8 @@ class AppState extends ChangeNotifier {
       payments = [];
       documents = const [];
       customServices = const [];
+      gmailImportAccount = null;
+      outlookImportAccount = null;
       isOfflineMode = false;
       hasPendingSyncChanges = false;
       syncErrorMessage = null;
@@ -379,6 +390,8 @@ class AppState extends ChangeNotifier {
         notificationPreferences,
       );
       await _initializePushNotifications(user.id);
+      await _restoreConnectedEmailAccounts(user.id);
+      await _autoSyncConnectedEmailImportsIfEligible();
       await _syncSmartNotifications();
       isAuthenticated = true;
     } catch (error) {
@@ -411,6 +424,8 @@ class AppState extends ChangeNotifier {
     payments = [];
     documents = const [];
     customServices = const [];
+    gmailImportAccount = null;
+    outlookImportAccount = null;
     notificationsAllowed = false;
     isOfflineMode = false;
     hasPendingSyncChanges = false;
@@ -659,17 +674,7 @@ class AppState extends ChangeNotifier {
     isSavingPayment = true;
     notifyListeners();
     try {
-      final normalizedCategory = _normalizedCategoryForPayment(payment);
-      final normalizedPayment = payment.copyWith(
-        name: BrandIconService.instance.canonicalDisplayName(
-          payment.name,
-          serviceId: payment.iconKey,
-          iconKey: payment.iconKey,
-        ),
-        category: normalizedCategory,
-        isEssential: normalizedCategory.isEssential,
-        currency: settings.currency.trim().toUpperCase(),
-      );
+      final normalizedPayment = _normalizePaymentForSave(payment);
       final wasCountingTowardLimit = original?.isActive ?? false;
       final willCountTowardLimit = normalizedPayment.isActive;
       final increasesActiveItemCount =
@@ -705,6 +710,60 @@ class AppState extends ChangeNotifier {
       isSavingPayment = false;
     }
     notifyListeners();
+  }
+
+  Future<int> importPayments(
+    List<RecurringPayment> importedPayments, {
+    Set<String> rememberAsCustomPaymentIds = const <String>{},
+  }) async {
+    if (importedPayments.isEmpty) {
+      return 0;
+    }
+
+    isSavingPayment = true;
+    notifyListeners();
+    try {
+      final normalizedPayments = importedPayments
+          .map(_normalizePaymentForSave)
+          .toList(growable: false);
+      final incomingActiveCount = normalizedPayments
+          .where((payment) => payment.isActive)
+          .length;
+
+      if (!hasPremiumFeatureAccess &&
+          activeSubscriptionCount + incomingActiveCount > subscriptionLimit) {
+        throw StateError('subscription_limit_reached');
+      }
+
+      final createdPayments = <RecurringPayment>[];
+      for (final payment in normalizedPayments) {
+        final saved = await paymentService.createPayment(payment);
+        createdPayments.add(saved);
+      }
+
+      payments = [...payments, ...createdPayments];
+
+      if (rememberAsCustomPaymentIds.isNotEmpty) {
+        for (final payment in createdPayments) {
+          if (!rememberAsCustomPaymentIds.contains(payment.id)) {
+            continue;
+          }
+          await customSubscriptionDatabaseService
+              .upsertCustomServiceFromPayment(payment.userId, payment);
+        }
+        customServices = await customSubscriptionDatabaseService
+            .listCustomServices(settings.userId);
+      }
+
+      await _syncSmartNotifications();
+      _refreshSyncStatus(
+        await syncService.syncAfterPaymentChange(settings.userId),
+      );
+      return createdPayments.length;
+    } finally {
+      isSavingPayment = false;
+      notifyListeners();
+    }
   }
 
   Future<void> deletePayment(RecurringPayment payment) async {
@@ -910,6 +969,7 @@ class AppState extends ChangeNotifier {
     isRestoreInProgress = true;
     notifyListeners();
     try {
+      final hadPremiumAccess = hasPremiumFeatureAccess;
       final result = await subscriptionService.restorePurchases();
       await _syncPremiumAccessFromBilling();
       _refreshEntitlements();
@@ -920,6 +980,9 @@ class AppState extends ChangeNotifier {
         notificationPreferences,
       );
       subscriptionMessage = result.message;
+      if (!hadPremiumAccess && hasPremiumFeatureAccess) {
+        await _forceSyncConnectedEmailImports();
+      }
       await _syncSmartNotifications();
       _refreshSyncStatus(
         await syncService.syncAfterSettingsChange(settings.userId),
@@ -934,6 +997,7 @@ class AppState extends ChangeNotifier {
     isSavingSettings = true;
     notifyListeners();
     try {
+      final hadPremiumAccess = hasPremiumFeatureAccess;
       userProfile = userProfile.copyWith(
         isPremiumOverride: enabled,
         updatedAt: DateTime.now(),
@@ -948,6 +1012,9 @@ class AppState extends ChangeNotifier {
       await notificationPreferencesService.savePreferences(
         notificationPreferences,
       );
+      if (!hadPremiumAccess && hasPremiumFeatureAccess) {
+        await _forceSyncConnectedEmailImports();
+      }
       await _syncSmartNotifications();
       _refreshSyncStatus(
         await syncService.syncAfterSettingsChange(settings.userId),
@@ -965,6 +1032,7 @@ class AppState extends ChangeNotifier {
     notifyListeners();
     late final SubscriptionActionResult result;
     try {
+      final hadPremiumAccess = hasPremiumFeatureAccess;
       debugPrint('[purchasePremium] Calling purchaseMonthlySubscription');
       result = await subscriptionService.purchaseMonthlySubscription();
       debugPrint(
@@ -983,6 +1051,9 @@ class AppState extends ChangeNotifier {
         notificationPreferences,
       );
       subscriptionMessage = result.cancelled ? null : result.message;
+      if (!hadPremiumAccess && hasPremiumFeatureAccess) {
+        await _forceSyncConnectedEmailImports();
+      }
 
       debugPrint('[purchasePremium] Syncing smart notifications');
       await _syncSmartNotifications();
@@ -1074,6 +1145,18 @@ class AppState extends ChangeNotifier {
     );
   }
 
+  Future<void> _restoreConnectedEmailAccounts(String userId) async {
+    if (userId.isEmpty) {
+      gmailImportAccount = null;
+      outlookImportAccount = null;
+      return;
+    }
+    gmailImportAccount = await emailImportService.gmailImportService
+        .restoreConnectedAccount(userId);
+    outlookImportAccount = await emailImportService.outlookImportService
+        .restoreConnectedAccount(userId);
+  }
+
   Future<void> _handlePushNotificationTap(Map<String, dynamic> data) async {
     final type = data['notification_type']?.toString() ?? '';
     if (type == 'weekly_summary') {
@@ -1155,6 +1238,154 @@ class AppState extends ChangeNotifier {
       notificationsEnabled: notificationPreferences.paymentRemindersEnabled,
     );
     notifyListeners();
+  }
+
+  Future<EmailScanSummaryResult> prepareEmailImportReview({
+    required ConnectedEmailAccount account,
+  }) async {
+    final review = await emailImportService.prepareImportReview(
+      userId: settings.userId,
+      account: account,
+      hasPremiumAccess: hasPremiumFeatureAccess,
+      existingPayments: payments,
+      customServices: customServices,
+      activeSubscriptionLimit: subscriptionLimit,
+    );
+    await _markConnectedEmailAccountSynced(
+      account.provider,
+      review.job.completedAt ?? DateTime.now(),
+    );
+    return review;
+  }
+
+  Future<void> connectGmailImportAccount() async {
+    final sessionEmail = authService.currentUser?.email ?? '';
+    gmailImportAccount = await emailImportService.gmailImportService
+        .connectAccount(userId: settings.userId, fallbackEmail: sessionEmail);
+    notifyListeners();
+  }
+
+  Future<void> connectOutlookImportAccount() async {
+    final sessionEmail = authService.currentUser?.email ?? '';
+    outlookImportAccount = await emailImportService.outlookImportService
+        .connectAccount(userId: settings.userId, fallbackEmail: sessionEmail);
+    notifyListeners();
+  }
+
+  Future<void> disconnectGmailImportAccount() async {
+    await emailImportService.gmailImportService.disconnectAccount(
+      settings.userId,
+    );
+    gmailImportAccount = null;
+    notifyListeners();
+  }
+
+  Future<void> disconnectOutlookImportAccount() async {
+    await emailImportService.outlookImportService.disconnectAccount(
+      settings.userId,
+    );
+    outlookImportAccount = null;
+    notifyListeners();
+  }
+
+  Future<void> refreshConnectedEmailAccounts() async {
+    await _restoreConnectedEmailAccounts(settings.userId);
+    notifyListeners();
+  }
+
+  Future<int> _syncConnectedEmailImports({required bool force}) async {
+    if (!hasPremiumFeatureAccess || settings.userId.isEmpty) {
+      return 0;
+    }
+
+    final connectedAccounts = [
+      if (gmailImportAccount?.isConnected == true) gmailImportAccount!,
+      if (outlookImportAccount?.isConnected == true) outlookImportAccount!,
+    ];
+
+    var importedCount = 0;
+    for (final account in connectedAccounts) {
+      if (!force &&
+          !emailImportService.shouldAutoSyncConnectedAccount(account)) {
+        continue;
+      }
+
+      try {
+        final review = await emailImportService.prepareImportReview(
+          userId: settings.userId,
+          account: account,
+          hasPremiumAccess: true,
+          existingPayments: payments,
+          customServices: customServices,
+          activeSubscriptionLimit: subscriptionLimit,
+        );
+        final importableItems = review.reviewItems
+            .where(
+              (item) =>
+                  !item.isLockedByPlan &&
+                  !item.isDuplicate &&
+                  item.paymentDraft != null,
+            )
+            .toList(growable: false);
+
+        importedCount += await importPayments(
+          importableItems
+              .map((item) => item.paymentDraft!)
+              .toList(growable: false),
+          rememberAsCustomPaymentIds: importableItems
+              .where(
+                (item) =>
+                    !item.candidate.hasStrongMatch && item.paymentDraft != null,
+              )
+              .map((item) => item.paymentDraft!.id)
+              .toSet(),
+        );
+      } catch (_) {
+        continue;
+      }
+    }
+
+    return importedCount;
+  }
+
+  Future<void> _autoSyncConnectedEmailImportsIfEligible() async {
+    await _syncConnectedEmailImports(force: false);
+  }
+
+  Future<void> _forceSyncConnectedEmailImports() async {
+    await _syncConnectedEmailImports(force: true);
+  }
+
+  Future<void> _markConnectedEmailAccountSynced(
+    ConnectedEmailProvider provider,
+    DateTime syncedAt,
+  ) async {
+    final account = provider == ConnectedEmailProvider.gmail
+        ? gmailImportAccount
+        : outlookImportAccount;
+    if (account == null) {
+      return;
+    }
+
+    final updatedAccount = account.copyWith(
+      lastSyncedAt: syncedAt,
+      updatedAt: syncedAt,
+      status: EmailConnectionStatus.connected,
+      clearErrorMessage: true,
+    );
+
+    if (provider == ConnectedEmailProvider.gmail) {
+      gmailImportAccount = updatedAccount;
+    } else {
+      outlookImportAccount = updatedAccount;
+    }
+
+    final accountService = emailImportService.gmailImportService.accountService;
+    final accounts = [
+      if (gmailImportAccount != null) gmailImportAccount!,
+      if (outlookImportAccount != null) outlookImportAccount!,
+    ];
+    await accountService.saveAccounts(settings.userId, accounts);
   }
 
   Future<void> refreshCustomServices() async {
@@ -1615,5 +1846,20 @@ class AppState extends ChangeNotifier {
       default:
         return payment.category;
     }
+  }
+
+  RecurringPayment _normalizePaymentForSave(RecurringPayment payment) {
+    final normalizedCategory = _normalizedCategoryForPayment(payment);
+    return payment.copyWith(
+      name: BrandIconService.instance.canonicalDisplayName(
+        payment.name,
+        serviceId: payment.iconKey,
+        iconKey: payment.iconKey,
+      ),
+      category: normalizedCategory,
+      isEssential: normalizedCategory.isEssential,
+      currency: settings.currency.trim().toUpperCase(),
+      updatedAt: DateTime.now(),
+    );
   }
 }

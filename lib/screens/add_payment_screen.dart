@@ -18,6 +18,7 @@ import '../widgets/brand_icon.dart';
 import '../widgets/document_card.dart';
 import '../widgets/glass_gradient_card.dart';
 import '../widgets/payment_form.dart';
+import 'email_import_flow_screen.dart';
 import 'subscription_limit_paywall_screen.dart';
 
 class AddPaymentScreen extends StatefulWidget {
@@ -687,14 +688,13 @@ class _AddPaymentScreenState extends State<AddPaymentScreen> {
     } on StateError catch (error) {
       if (!mounted) return;
       final message = switch (error.message) {
-        'document_too_large' =>
-          localeText(
-            context,
-            en: 'This file is too large. Please upload a file under 10MB.',
-            da: 'Filen er for stor. Upload venligst en fil under 10 MB.',
-            de: 'Diese Datei ist zu gross. Bitte lade eine Datei unter 10 MB hoch.',
-            es: 'Este archivo es demasiado grande. Sube un archivo de menos de 10 MB.',
-          ),
+        'document_too_large' => localeText(
+          context,
+          en: 'This file is too large. Please upload a file under 10MB.',
+          da: 'Filen er for stor. Upload venligst en fil under 10 MB.',
+          de: 'Diese Datei ist zu gross. Bitte lade eine Datei unter 10 MB hoch.',
+          es: 'Este archivo es demasiado grande. Sube un archivo de menos de 10 MB.',
+        ),
         'unsupported_document_type' => localeText(
           context,
           en: 'This file type is not supported yet.',
@@ -715,13 +715,13 @@ class _AddPaymentScreenState extends State<AddPaymentScreen> {
       if (!mounted) return;
       showErrorSnackBar(
         context,
-          localeText(
-            context,
-            en: 'We could not attach that document right now.',
-            da: 'Vi kunne ikke vedhæfte dokumentet lige nu.',
-            de: 'Wir konnten das Dokument gerade nicht anhängen.',
-            es: 'No pudimos adjuntar ese documento en este momento.',
-          ),
+        localeText(
+          context,
+          en: 'We could not attach that document right now.',
+          da: 'Vi kunne ikke vedhæfte dokumentet lige nu.',
+          de: 'Wir konnten das Dokument gerade nicht anhängen.',
+          es: 'No pudimos adjuntar ese documento en este momento.',
+        ),
       );
     }
   }
@@ -864,36 +864,90 @@ class _AddPaymentScreenState extends State<AddPaymentScreen> {
               ],
             ),
           ),
+          const SizedBox(height: BizootSpacing.md),
+          GlassGradientCard(
+            gradient: BizootGradients.surfaceStrong,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  localeText(
+                    context,
+                    en: 'Import from email',
+                    da: 'Importer fra e-mail',
+                    de: 'Aus E-Mail importieren',
+                    es: 'Importar desde correo',
+                  ),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800),
+                ),
+                const SizedBox(height: BizootSpacing.xs),
+                Text(
+                  localeText(
+                    context,
+                    en: 'Connect Gmail or Outlook to detect recurring payments from billing emails before anything is saved.',
+                    da: 'Forbind Gmail eller Outlook for at finde tilbagevendende betalinger fra faktureringsmails, før noget gemmes.',
+                    de: 'Verbinde Gmail oder Outlook, um wiederkehrende Zahlungen aus Abrechnungs-E-Mails zu erkennen, bevor etwas gespeichert wird.',
+                    es: 'Conecta Gmail u Outlook para detectar pagos recurrentes desde correos de facturación antes de guardar nada.',
+                  ),
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: BizootColors.textSecondary,
+                  ),
+                ),
+                const SizedBox(height: BizootSpacing.md),
+                AppButton(
+                  label: localeText(
+                    context,
+                    en: 'Connect email',
+                    da: 'Forbind e-mail',
+                    de: 'E-Mail verbinden',
+                    es: 'Conectar correo',
+                  ),
+                  icon: Icons.mark_email_read_outlined,
+                  secondary: true,
+                  onPressed: () {
+                    AppHaptics.tap();
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const EmailImportFlowScreen(),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
           if (_autoFilledServiceName != null) ...[
             const SizedBox(height: BizootSpacing.md),
             GlassGradientCard(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                Text(
-                  localeText(
-                    context,
-                    en: 'Bizoot recognized $_autoFilledServiceName',
-                    da: 'Bizoot genkendte $_autoFilledServiceName',
-                    de: 'Bizoot hat $_autoFilledServiceName erkannt',
-                    es: 'Bizoot reconoció $_autoFilledServiceName',
-                  ),
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.w800,
-                  ),
+                  Text(
+                    localeText(
+                      context,
+                      en: 'Bizoot recognized $_autoFilledServiceName',
+                      da: 'Bizoot genkendte $_autoFilledServiceName',
+                      de: 'Bizoot hat $_autoFilledServiceName erkannt',
+                      es: 'Bizoot reconoció $_autoFilledServiceName',
+                    ),
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                   const SizedBox(height: BizootSpacing.xs),
-                Text(
-                  localeText(
-                    context,
-                    en: 'Service metadata and cancellation link are ready to use.',
-                    da: 'Tjenestemetadata og opsigelseslink er klar til brug.',
-                    de: 'Servicemetadaten und Kündigungslink sind einsatzbereit.',
-                    es: 'Los metadatos del servicio y el enlace de cancelación ya están listos.',
-                  ),
-                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: BizootColors.textSecondary,
-                  ),
+                  Text(
+                    localeText(
+                      context,
+                      en: 'Service metadata and cancellation link are ready to use.',
+                      da: 'Tjenestemetadata og opsigelseslink er klar til brug.',
+                      de: 'Servicemetadaten und Kündigungslink sind einsatzbereit.',
+                      es: 'Los metadatos del servicio y el enlace de cancelación ya están listos.',
+                    ),
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: BizootColors.textSecondary,
+                    ),
                   ),
                 ],
               ),
