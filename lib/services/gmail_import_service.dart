@@ -324,8 +324,6 @@ class GmailImportService {
     final uri = Uri.parse('$_gmailBaseUrl/users/me/messages/$messageId').replace(
       queryParameters: {
         'format': 'full',
-        'fields':
-            'id,snippet,internalDate,payload(headers,name,value,body/data,body/attachmentId,body/size,filename,mimeType,parts)',
       },
     );
     final response = await _gmailGet(uri, accessToken);

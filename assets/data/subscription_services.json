@@ -2807,15 +2807,16 @@
   },
   {
     "id": "quickbooks",
-    "name": "Finance & Business",
-    "category": "https://quickbooks.intuit.com",
+    "name": "QuickBooks",
+    "category": "Finance & Business",
     "aliases": [],
-    "website": "https://accounts.intuit.com",
-    "cancelUrl": "quickbooks",
-    "icon": "#2CA01C",
-    "color": 30,
+    "website": "https://quickbooks.intuit.com",
+    "cancelUrl": "https://accounts.intuit.com",
+    "icon": "quickbooks",
+    "color": "#2CA01C",
     "commonBilling": "monthly",
-    "averageMonthlyCost": [
+    "averageMonthlyCost": 30,
+    "tags": [
       "finance",
       "accounting",
       "business"
