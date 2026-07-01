@@ -730,7 +730,7 @@ class AppState extends ChangeNotifier {
           .where((payment) => payment.isActive)
           .length;
 
-      if (!hasPremiumFeatureAccess &&
+      if (!isPremiumUser &&
           activeSubscriptionCount + incomingActiveCount > subscriptionLimit) {
         throw StateError('subscription_limit_reached');
       }
@@ -1246,7 +1246,7 @@ class AppState extends ChangeNotifier {
     final review = await emailImportService.prepareImportReview(
       userId: settings.userId,
       account: account,
-      hasPremiumAccess: hasPremiumFeatureAccess,
+      hasPremiumAccess: isPremiumUser,
       existingPayments: payments,
       customServices: customServices,
       activeSubscriptionLimit: subscriptionLimit,
