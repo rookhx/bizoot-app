@@ -25,7 +25,7 @@ class AppConfig {
   );
   static const microsoftOutlookClientId = String.fromEnvironment(
     'MICROSOFT_OUTLOOK_CLIENT_ID',
-    defaultValue: '53664665-2561-48c2-8403-fd6c2daa1c6e',
+    defaultValue: '278faa0e-75ca-4221-b870-05d6fc54428a',
   );
   static const microsoftOutlookTenantId = String.fromEnvironment(
     'MICROSOFT_OUTLOOK_TENANT_ID',
