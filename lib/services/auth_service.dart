@@ -46,6 +46,14 @@ class AuthService {
     }
   }
 
+  Future<void> sendPasswordResetEmail(String email) async {
+    try {
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: email.trim());
+    } on FirebaseAuthException catch (error) {
+      throw Exception(_messageForAuthError(error));
+    }
+  }
+
   String _messageForAuthError(FirebaseAuthException error) {
     switch (error.code) {
       case 'invalid-email':
@@ -64,6 +72,8 @@ class AuthService {
         return 'Too many attempts. Please try again shortly.';
       case 'network-request-failed':
         return 'Network error. Please check your connection and try again.';
+      case 'missing-email':
+        return 'Please enter your email address first.';
       default:
         return error.message ?? 'Authentication failed. Please try again.';
     }

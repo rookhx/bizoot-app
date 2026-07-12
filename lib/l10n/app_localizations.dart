@@ -36,6 +36,13 @@ class AppLocalizations {
       'enterEmailPassword': 'Enter both your email and password to continue.',
       'alreadyHaveAccount': 'Already have an account? Log in',
       'needAccount': 'Need an account? Sign up',
+      'forgotPassword': 'Forgot password?',
+      'enterEmailForPasswordReset':
+          'Enter your email address first to reset your password.',
+      'passwordResetEmailSent':
+          'Password reset email sent. Check your inbox.',
+      'passwordResetFailed':
+          'Bizoot could not send the password reset email right now.',
       'back': 'Back',
       'continueLabel': 'Continue',
       'finishSetup': 'Finish setup',
@@ -194,6 +201,13 @@ class AppLocalizations {
           'Indtast både e-mail og adgangskode for at fortsætte.',
       'alreadyHaveAccount': 'Har du allerede en konto? Log ind',
       'needAccount': 'Har du brug for en konto? Tilmeld dig',
+      'forgotPassword': 'Glemt adgangskode?',
+      'enterEmailForPasswordReset':
+          'Indtast først din e-mailadresse for at nulstille din adgangskode.',
+      'passwordResetEmailSent':
+          'E-mail til nulstilling af adgangskode er sendt. Tjek din indbakke.',
+      'passwordResetFailed':
+          'Bizoot kunne ikke sende e-mailen til nulstilling af adgangskode lige nu.',
       'back': 'Tilbage',
       'continueLabel': 'Fortsæt',
       'finishSetup': 'Afslut opsætning',
@@ -347,6 +361,13 @@ class AppLocalizations {
           'Gib sowohl deine E-Mail als auch dein Passwort ein, um fortzufahren.',
       'alreadyHaveAccount': 'Du hast bereits ein Konto? Anmelden',
       'needAccount': 'Du brauchst ein Konto? Registrieren',
+      'forgotPassword': 'Passwort vergessen?',
+      'enterEmailForPasswordReset':
+          'Gib zuerst deine E-Mail-Adresse ein, um dein Passwort zurückzusetzen.',
+      'passwordResetEmailSent':
+          'E-Mail zum Zurücksetzen des Passworts gesendet. Prüfe deinen Posteingang.',
+      'passwordResetFailed':
+          'Bizoot konnte die E-Mail zum Zurücksetzen des Passworts gerade nicht senden.',
       'back': 'Zurück',
       'continueLabel': 'Weiter',
       'finishSetup': 'Einrichtung abschließen',
@@ -505,6 +526,13 @@ class AppLocalizations {
           'Introduce tu correo y tu contraseña para continuar.',
       'alreadyHaveAccount': '¿Ya tienes una cuenta? Inicia sesión',
       'needAccount': '¿Necesitas una cuenta? Regístrate',
+      'forgotPassword': '¿Olvidaste tu contraseña?',
+      'enterEmailForPasswordReset':
+          'Introduce primero tu correo para restablecer tu contraseña.',
+      'passwordResetEmailSent':
+          'Se ha enviado el correo para restablecer la contraseña. Revisa tu bandeja de entrada.',
+      'passwordResetFailed':
+          'Bizoot no pudo enviar el correo de restablecimiento de contraseña en este momento.',
       'back': 'Atrás',
       'continueLabel': 'Continuar',
       'finishSetup': 'Finalizar configuración',
@@ -669,6 +697,11 @@ class AppLocalizations {
   String get enterEmailPassword => _text('enterEmailPassword');
   String get alreadyHaveAccount => _text('alreadyHaveAccount');
   String get needAccount => _text('needAccount');
+  String get forgotPassword => _text('forgotPassword');
+  String get enterEmailForPasswordReset =>
+      _text('enterEmailForPasswordReset');
+  String get passwordResetEmailSent => _text('passwordResetEmailSent');
+  String get passwordResetFailed => _text('passwordResetFailed');
   String get back => _text('back');
   String get continueLabel => _text('continueLabel');
   String get finishSetup => _text('finishSetup');

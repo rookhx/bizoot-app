@@ -19,6 +19,10 @@
   "enterEmailPassword": "Enter both your email and password to continue.",
   "alreadyHaveAccount": "Already have an account? Log in",
   "needAccount": "Need an account? Sign up",
+  "forgotPassword": "Forgot password?",
+  "enterEmailForPasswordReset": "Enter your email address first to reset your password.",
+  "passwordResetEmailSent": "Password reset email sent. Check your inbox.",
+  "passwordResetFailed": "Bizoot could not send the password reset email right now.",
   "onboardingStep": "Step {current} of {total}",
   "@onboardingStep": {
     "placeholders": {

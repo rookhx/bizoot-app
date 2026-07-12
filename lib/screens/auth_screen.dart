@@ -91,6 +91,48 @@ class _AuthScreenState extends State<AuthScreen> {
                     decoration: InputDecoration(labelText: l10n.password),
                     obscureText: true,
                   ),
+                  if (!_isSignUp) ...[
+                    const SizedBox(height: 8),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        onPressed: appState.isAuthLoading
+                            ? null
+                            : () async {
+                                final email = _emailController.text.trim();
+                                if (email.isEmpty) {
+                                  ScaffoldMessenger.of(context)
+                                    ..hideCurrentSnackBar()
+                                    ..showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          l10n.enterEmailForPasswordReset,
+                                        ),
+                                      ),
+                                    );
+                                  return;
+                                }
+
+                                final success = await appState
+                                    .sendPasswordResetEmail(email);
+                                if (!context.mounted) return;
+                                ScaffoldMessenger.of(context)
+                                  ..hideCurrentSnackBar()
+                                  ..showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        success
+                                            ? l10n.passwordResetEmailSent
+                                            : (appState.errorMessage ??
+                                                l10n.passwordResetFailed),
+                                      ),
+                                    ),
+                                  );
+                              },
+                        child: Text(l10n.forgotPassword),
+                      ),
+                    ),
+                  ],
                   if (appState.errorMessage != null) ...[
                     const SizedBox(height: 12),
                     Text(

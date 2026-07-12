@@ -19,6 +19,10 @@
   "enterEmailPassword": "Introduce tu correo y tu contraseña para continuar.",
   "alreadyHaveAccount": "¿Ya tienes una cuenta? Inicia sesión",
   "needAccount": "¿Necesitas una cuenta? Regístrate",
+  "forgotPassword": "¿Olvidaste tu contraseña?",
+  "enterEmailForPasswordReset": "Introduce primero tu correo para restablecer tu contraseña.",
+  "passwordResetEmailSent": "Se ha enviado el correo para restablecer la contraseña. Revisa tu bandeja de entrada.",
+  "passwordResetFailed": "Bizoot no pudo enviar el correo de restablecimiento de contraseña en este momento.",
   "onboardingStep": "Paso {current} de {total}",
   "@onboardingStep": {
     "placeholders": {

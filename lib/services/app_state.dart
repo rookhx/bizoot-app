@@ -395,12 +395,28 @@ class AppState extends ChangeNotifier {
       await _syncSmartNotifications();
       isAuthenticated = true;
     } catch (error) {
-      errorMessage = error.toString();
+      errorMessage = _formatErrorMessage(error);
       isAuthenticated = false;
     } finally {
       isAuthLoading = false;
     }
     notifyListeners();
+  }
+
+  Future<bool> sendPasswordResetEmail(String email) async {
+    errorMessage = null;
+    isAuthLoading = true;
+    notifyListeners();
+    try {
+      await authService.sendPasswordResetEmail(email);
+      return true;
+    } catch (error) {
+      errorMessage = _formatErrorMessage(error);
+      return false;
+    } finally {
+      isAuthLoading = false;
+      notifyListeners();
+    }
   }
 
   Future<void> signOut() async {
@@ -434,6 +450,15 @@ class AppState extends ChangeNotifier {
     selectedTab = 0;
     await settingsService.savePreferredLanguage(preservedLanguage);
     notifyListeners();
+  }
+
+  String _formatErrorMessage(Object error) {
+    final raw = error.toString().trim();
+    const prefix = 'Exception: ';
+    if (raw.startsWith(prefix)) {
+      return raw.substring(prefix.length).trim();
+    }
+    return raw;
   }
 
   Future<void> deleteAccountPlaceholder() async {
