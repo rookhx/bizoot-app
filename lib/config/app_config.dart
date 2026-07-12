@@ -13,19 +13,19 @@ class AppConfig {
   static const googleGmailClientId = String.fromEnvironment(
     'GOOGLE_GMAIL_CLIENT_ID',
     defaultValue:
-        '20507600506-kfa4tv810ae3ba15gqh7u4mqagbl021g.apps.googleusercontent.com',
+        '311435914370-hnrnv3kt2rib7cqnfa69boiug9pf3idm.apps.googleusercontent.com',
   );
   static const googleGmailServerClientId = String.fromEnvironment(
     'GOOGLE_GMAIL_SERVER_CLIENT_ID',
     defaultValue:
-        '20507600506-0sgek7eo060tmr6sng0h3qfeunetvsoe.apps.googleusercontent.com',
+        '311435914370-sus3rod7ecbomkvgbusbbmlie15smg4r.apps.googleusercontent.com',
   );
   static const googleGmailIosReversedClientId = String.fromEnvironment(
     'GOOGLE_GMAIL_IOS_REVERSED_CLIENT_ID',
   );
   static const microsoftOutlookClientId = String.fromEnvironment(
     'MICROSOFT_OUTLOOK_CLIENT_ID',
-    defaultValue: '53664665-2561-48c2-8403-fd6c2daa1c6e',
+    defaultValue: '278faa0e-75ca-4221-b870-05d6fc54428a',
   );
   static const microsoftOutlookTenantId = String.fromEnvironment(
     'MICROSOFT_OUTLOOK_TENANT_ID',

@@ -12,7 +12,20 @@
           "package_name": "com.app.bizoot"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "311435914370-hnrnv3kt2rib7cqnfa69boiug9pf3idm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.bizoot",
+            "certificate_hash": "2324b2d6e20bed69d0446b4d4a8fa1a7425e0af3"
+          }
+        },
+        {
+          "client_id": "311435914370-sus3rod7ecbomkvgbusbbmlie15smg4r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDGednrNIHNwpXjz1tFsuRnC9ghT7ZGIa4"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311435914370-sus3rod7ecbomkvgbusbbmlie15smg4r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "311435914370-b7mnkrur8h8kolj21u1s9b1o8roacin8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.bizoot"
+              }
+            }
+          ]
         }
       }
     }
