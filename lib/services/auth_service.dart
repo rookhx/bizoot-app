@@ -46,6 +46,33 @@ class AuthService {
     }
   }
 
+  Future<void> reauthenticate(String password) async {
+    final user = FirebaseAuth.instance.currentUser;
+    final email = user?.email;
+    if (user == null || email == null || email.isEmpty) {
+      throw Exception('Please sign in again before deleting your account.');
+    }
+    try {
+      await user.reauthenticateWithCredential(
+        EmailAuthProvider.credential(email: email, password: password),
+      );
+    } on FirebaseAuthException catch (error) {
+      throw Exception(_messageForAuthError(error));
+    }
+  }
+
+  Future<void> deleteAccount() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      throw Exception('Please sign in again before deleting your account.');
+    }
+    try {
+      await user.delete();
+    } on FirebaseAuthException catch (error) {
+      throw Exception(_messageForAuthError(error));
+    }
+  }
+
   Future<void> sendPasswordResetEmail(String email) async {
     try {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email.trim());
@@ -68,6 +95,8 @@ class AuthService {
         return 'An account with this email already exists.';
       case 'weak-password':
         return 'Please choose a stronger password.';
+      case 'requires-recent-login':
+        return 'Please sign in again before deleting your account.';
       case 'too-many-requests':
         return 'Too many attempts. Please try again shortly.';
       case 'network-request-failed':

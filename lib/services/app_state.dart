@@ -461,7 +461,10 @@ class AppState extends ChangeNotifier {
     return raw;
   }
 
-  Future<void> deleteAccountPlaceholder() async {
+  Future<void> deleteAccount(String password) async {
+    // Verify the password before destroying anything: Firebase requires a
+    // recent login to delete a user, and failing first leaves data intact.
+    await authService.reauthenticate(password);
     final userId = settings.userId;
     await notificationService.cancelAll();
     await pushNotificationService.deleteTokenOnLogout(userId);
@@ -480,6 +483,7 @@ class AppState extends ChangeNotifier {
     customServices = const [];
     errorMessage = null;
     subscriptionMessage = null;
+    await authService.deleteAccount();
     await signOut();
   }
 

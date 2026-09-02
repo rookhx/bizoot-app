@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>311435914370-b7mnkrur8h8kolj21u1s9b1o8roacin8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.311435914370-b7mnkrur8h8kolj21u1s9b1o8roacin8</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>311435914370-1996867vn4g7o2s2qn8gvljoum8gg48t.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA-AfYeOEgW7yz8UJkMHSx0s8rbtvfAqWg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>311435914370</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.app.bizoot</string>
+	<key>PROJECT_ID</key>
+	<string>bizoot-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bizoot-app.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:311435914370:ios:624beb8aca4db1065f189b</string>
+</dict>
+</plist>

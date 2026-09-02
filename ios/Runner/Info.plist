@@ -26,6 +26,8 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -35,7 +37,7 @@
 			<string>bizoot.gmail.oauth</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>$(GOOGLE_REVERSED_CLIENT_ID)</string>
+				<string>com.googleusercontent.apps.311435914370-b7mnkrur8h8kolj21u1s9b1o8roacin8</string>
 			</array>
 		</dict>
 		<dict>
