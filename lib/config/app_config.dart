@@ -37,7 +37,7 @@ class AppConfig {
   );
   static const revenueCatIosApiKey = String.fromEnvironment(
     'REVENUECAT_IOS_API_KEY',
-    defaultValue: '',
+    defaultValue: 'appl_aWoymRBFsIaysyNPjTHesFVmIpZ',
   );
   static const revenueCatAndroidApiKey = String.fromEnvironment(
     'REVENUECAT_ANDROID_API_KEY',
