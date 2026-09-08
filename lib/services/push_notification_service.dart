@@ -107,7 +107,12 @@ class PushNotificationService {
           });
     }
 
-    final initialMessage = await FirebaseMessaging.instance.getInitialMessage();
+    // On iOS this awaits the APNS token and can hang indefinitely (e.g. on
+    // the simulator or before registration completes); cap it so startup
+    // never blocks on push.
+    final initialMessage = await FirebaseMessaging.instance
+        .getInitialMessage()
+        .timeout(const Duration(seconds: 5), onTimeout: () => null);
     if (initialMessage != null) {
       await _handleMessageTap(initialMessage);
     }
@@ -165,7 +170,9 @@ class PushNotificationService {
         return;
       }
 
-      _fcmToken = await FirebaseMessaging.instance.getToken();
+      _fcmToken = await FirebaseMessaging.instance
+          .getToken()
+          .timeout(const Duration(seconds: 10), onTimeout: () => null);
       if (_fcmToken == null || _fcmToken!.isEmpty) {
         _deviceRegistered = false;
         _lastSyncError = 'FCM token was not available.';
