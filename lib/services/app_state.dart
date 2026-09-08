@@ -260,6 +260,7 @@ class AppState extends ChangeNotifier {
 
   Future<void> bootstrap() async {
     await notificationService.initialize();
+    try {
     final user = authService.currentUser;
     if (user != null) {
       isAuthenticated = true;
@@ -320,8 +321,12 @@ class AppState extends ChangeNotifier {
       notificationsAllowed = await notificationService
           .areNotificationsEnabled();
     }
-    isBootstrapping = false;
-    notifyListeners();
+    } catch (error) {
+      syncErrorMessage = 'Startup sync failed: $error';
+    } finally {
+      isBootstrapping = false;
+      notifyListeners();
+    }
   }
 
   Future<void> signIn(

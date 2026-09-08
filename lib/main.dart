@@ -117,14 +117,18 @@ Future<void> main() async {
       customSubscriptionDatabaseService: customSubscriptionDatabaseService,
     ),
   );
-  await appState.bootstrap();
-
+  // Render immediately: appState starts with isBootstrapping == true, so
+  // _RootView shows SplashScreen. Running bootstrap() before runApp would
+  // block the first frame on network sync and leave a white screen; instead
+  // let it run in the background and flip isBootstrapping when it finishes.
   runApp(
     ChangeNotifierProvider.value(
       value: appState,
       child: const SubscriptionControlFlutterApp(),
     ),
   );
+
+  unawaited(appState.bootstrap());
 }
 
 class SubscriptionControlFlutterApp extends StatelessWidget {
