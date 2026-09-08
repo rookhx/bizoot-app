@@ -118,8 +118,10 @@ class AppState extends ChangeNotifier {
   String? subscriptionMessage;
   String? syncErrorMessage;
   DateTime? lastSyncedAt;
-  late UserProfile userProfile;
-  late UserSettings settings;
+  // Initialized with defaults so the UI can render (splash) before
+  // bootstrap() populates the real values; bootstrap overwrites both.
+  UserProfile userProfile = UserProfile.defaults();
+  UserSettings settings = UserSettings.defaults();
   NotificationPreferences notificationPreferences =
       NotificationPreferences.defaults();
   List<RecurringPayment> payments = [];
