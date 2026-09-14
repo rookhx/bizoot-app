@@ -32,6 +32,8 @@ class OutlookImportService {
   static const String _graphBaseUrl = 'https://graph.microsoft.com/v1.0';
   static const int _maxMessageResults = 80;
   static const int _maxAttachmentBytes = 2 * 1024 * 1024;
+  static const String _messageSearchQuery =
+      '"invoice" OR "receipt" OR "billing" OR "billed" OR "payment" OR "charged" OR "renewal" OR "auto-renew" OR "subscription" OR "membership" OR "purchase confirmation" OR "order confirmation"';
 
   String get _issuer =>
       'https://login.microsoftonline.com/${AppConfig.microsoftOutlookTenantId}/v2.0';
@@ -223,10 +225,8 @@ class OutlookImportService {
           queryParameters: {
             r'$select':
                 'id,subject,bodyPreview,body,receivedDateTime,hasAttachments,from,sender',
+            r'$search': _messageSearchQuery,
             r'$top': '25',
-            r'$orderby': 'receivedDateTime desc',
-            r'$filter':
-                "receivedDateTime ge ${_graphDate(windowStart)} and receivedDateTime le ${_graphDate(windowEnd)}",
           },
         )
         .toString();

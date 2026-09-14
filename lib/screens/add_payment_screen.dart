@@ -18,7 +18,6 @@ import '../widgets/brand_icon.dart';
 import '../widgets/document_card.dart';
 import '../widgets/glass_gradient_card.dart';
 import '../widgets/payment_form.dart';
-import 'email_import_flow_screen.dart';
 import 'subscription_limit_paywall_screen.dart';
 
 class AddPaymentScreen extends StatefulWidget {
@@ -860,60 +859,6 @@ class _AddPaymentScreenState extends State<AddPaymentScreen> {
                         ),
                       )
                       .toList(),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: BizootSpacing.md),
-          GlassGradientCard(
-            gradient: BizootGradients.surfaceStrong,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  localeText(
-                    context,
-                    en: 'Import from email',
-                    da: 'Importer fra e-mail',
-                    de: 'Aus E-Mail importieren',
-                    es: 'Importar desde correo',
-                  ),
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800),
-                ),
-                const SizedBox(height: BizootSpacing.xs),
-                Text(
-                  localeText(
-                    context,
-                    en: 'Connect Gmail or Outlook to detect recurring payments from billing emails before anything is saved.',
-                    da: 'Forbind Gmail eller Outlook for at finde tilbagevendende betalinger fra faktureringsmails, før noget gemmes.',
-                    de: 'Verbinde Gmail oder Outlook, um wiederkehrende Zahlungen aus Abrechnungs-E-Mails zu erkennen, bevor etwas gespeichert wird.',
-                    es: 'Conecta Gmail u Outlook para detectar pagos recurrentes desde correos de facturación antes de guardar nada.',
-                  ),
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: BizootColors.textSecondary,
-                  ),
-                ),
-                const SizedBox(height: BizootSpacing.md),
-                AppButton(
-                  label: localeText(
-                    context,
-                    en: 'Connect email',
-                    da: 'Forbind e-mail',
-                    de: 'E-Mail verbinden',
-                    es: 'Conectar correo',
-                  ),
-                  icon: Icons.mark_email_read_outlined,
-                  secondary: true,
-                  onPressed: () {
-                    AppHaptics.tap();
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => const EmailImportFlowScreen(),
-                      ),
-                    );
-                  },
                 ),
               ],
             ),

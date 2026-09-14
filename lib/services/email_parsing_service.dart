@@ -11,19 +11,73 @@ class EmailParsingService {
   static const List<String> _billingKeywords = [
     'invoice',
     'receipt',
+    'payment',
+    'billing',
+    'purchase',
+    'purchase confirmation',
+    'order confirmation',
+    'charged',
+    'amount due',
+    'total paid',
+    'total due',
+    'statement',
     'subscription',
     'renewal',
     'trial',
-    'payment',
-    'charged',
-    'billing',
-    'plan',
     'membership',
-    'due',
     'autopay',
     'recurring',
     'monthly',
     'yearly',
+  ];
+
+  static const List<String> _ongoingBillingKeywords = [
+    'subscription',
+    'membership',
+    'renewal',
+    'renews',
+    'renews on',
+    'next billing',
+    'next payment',
+    'autopay',
+    'auto renew',
+    'auto-renew',
+    'recurring',
+    'plan',
+    'monthly',
+    'yearly',
+    'annual',
+    'annually',
+    'per month',
+    'per year',
+    'trial ends',
+    'trial ending',
+  ];
+
+  static const List<String> _marketingKeywords = [
+    'unsubscribe',
+    'manage preferences',
+    'email preferences',
+    'view in browser',
+    'newsletter',
+    'promotion',
+    'promotional',
+    'promo',
+    'offer',
+    'offers',
+    'discount',
+    'coupon',
+    'deal',
+    'deals',
+    'limited time',
+    'shop now',
+    'buy now',
+    'recommended for you',
+    'featured products',
+    'new arrivals',
+    'sale ends',
+    'save big',
+    'marketing',
   ];
 
   static const List<String> _renewalKeywords = [
@@ -86,6 +140,19 @@ class EmailParsingService {
       final cancellationUrl = _extractCancellationUrl(body);
       final category = _inferCategory(serviceName, message, normalizedBody);
       final providerHint = _providerHint(serviceName, message.senderEmail);
+      final hasStrongBillingSignal = _hasStrongBillingSignal(
+        message: message,
+        normalizedBody: normalizedBody,
+      );
+      final looksMarketingOnly = _looksMarketingOnly(
+        message: message,
+        normalizedBody: normalizedBody,
+        amount: amount,
+        frequency: frequency,
+        nextPaymentDate: nextPaymentDate,
+        renewalDate: renewalDate,
+        trialEndDate: trialEndDate,
+      );
       final confidence = _confidenceFor(
         message: message,
         normalizedBody: normalizedBody,
@@ -97,6 +164,14 @@ class EmailParsingService {
         trialEndDate: trialEndDate,
         cancellationUrl: cancellationUrl,
       );
+
+      if (!hasStrongBillingSignal) {
+        continue;
+      }
+
+      if (looksMarketingOnly) {
+        continue;
+      }
 
       if (confidence < _minimumConfidence &&
           amount == null &&
@@ -170,7 +245,44 @@ class EmailParsingService {
       '${message.subject}\n${message.snippet}\n${message.bodyText}'.trim();
 
   bool _looksSubscriptionRelated(String normalizedBody) {
-    return _billingKeywords.any(normalizedBody.contains);
+    return _billingKeywords.any(normalizedBody.contains) ||
+        _ongoingBillingKeywords.any(normalizedBody.contains);
+  }
+
+  bool _hasStrongBillingSignal({
+    required EmailImportMessageSource message,
+    required String normalizedBody,
+  }) {
+    final normalizedSubject = _normalize(message.subject);
+    final subjectHasBilling = _billingKeywords.any(normalizedSubject.contains);
+    final bodyHasBilling = _billingKeywords.any(normalizedBody.contains);
+    final hasRecurring = _ongoingBillingKeywords.any(normalizedBody.contains);
+    return subjectHasBilling || (bodyHasBilling && hasRecurring);
+  }
+
+  bool _looksMarketingOnly({
+    required EmailImportMessageSource message,
+    required String normalizedBody,
+    required double? amount,
+    required PaymentFrequency? frequency,
+    required DateTime? nextPaymentDate,
+    required DateTime? renewalDate,
+    required DateTime? trialEndDate,
+  }) {
+    final normalizedSubject = _normalize(message.subject);
+    final marketingHits = _marketingKeywords.where(
+      (keyword) =>
+          normalizedBody.contains(keyword) || normalizedSubject.contains(keyword),
+    );
+    final hasMarketingSignals = marketingHits.length >= 2;
+    final hasBillingEvidence =
+        amount != null ||
+        frequency != null ||
+        nextPaymentDate != null ||
+        renewalDate != null ||
+        trialEndDate != null ||
+        _ongoingBillingKeywords.any(normalizedBody.contains);
+    return hasMarketingSignals && !hasBillingEvidence;
   }
 
   String _extractServiceName(EmailImportMessageSource message, String body) {
@@ -430,9 +542,11 @@ class EmailParsingService {
   }) {
     var confidence = 0.18;
     if (_billingKeywords.any(normalizedBody.contains)) confidence += 0.16;
+    if (_ongoingBillingKeywords.any(normalizedBody.contains)) confidence += 0.12;
     if (_renewalKeywords.any(normalizedBody.contains)) confidence += 0.08;
     if (_trialKeywords.any(normalizedBody.contains)) confidence += 0.08;
     if (_cancellationKeywords.any(normalizedBody.contains)) confidence += 0.06;
+    if (_marketingKeywords.any(normalizedBody.contains)) confidence -= 0.14;
     if (amount != null && amount > 0) confidence += 0.18;
     if (frequency != null) confidence += 0.08;
     if (nextPaymentDate != null) confidence += 0.08;

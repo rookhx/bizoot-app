@@ -17,6 +17,7 @@ import '../models/user_profile.dart';
 import '../models/user_settings.dart';
 import '../models/weekly_report.dart';
 import '../utils/payment_math.dart';
+import '../config/app_config.dart';
 import 'auth_service.dart';
 import 'custom_subscription_database_service.dart';
 import 'document_storage_service.dart';
@@ -1171,7 +1172,7 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> _restoreConnectedEmailAccounts(String userId) async {
-    if (userId.isEmpty) {
+    if (!AppConfig.enableEmailImportFeature || userId.isEmpty) {
       gmailImportAccount = null;
       outlookImportAccount = null;
       return;
@@ -1268,6 +1269,9 @@ class AppState extends ChangeNotifier {
   Future<EmailScanSummaryResult> prepareEmailImportReview({
     required ConnectedEmailAccount account,
   }) async {
+    if (!AppConfig.enableEmailImportFeature) {
+      throw StateError('email_import_disabled');
+    }
     final review = await emailImportService.prepareImportReview(
       userId: settings.userId,
       account: account,
@@ -1284,6 +1288,9 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> connectGmailImportAccount() async {
+    if (!AppConfig.enableEmailImportFeature) {
+      throw StateError('email_import_disabled');
+    }
     final sessionEmail = authService.currentUser?.email ?? '';
     gmailImportAccount = await emailImportService.gmailImportService
         .connectAccount(userId: settings.userId, fallbackEmail: sessionEmail);
@@ -1291,6 +1298,9 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> connectOutlookImportAccount() async {
+    if (!AppConfig.enableEmailImportFeature) {
+      throw StateError('email_import_disabled');
+    }
     final sessionEmail = authService.currentUser?.email ?? '';
     outlookImportAccount = await emailImportService.outlookImportService
         .connectAccount(userId: settings.userId, fallbackEmail: sessionEmail);
@@ -1319,6 +1329,9 @@ class AppState extends ChangeNotifier {
   }
 
   Future<int> _syncConnectedEmailImports({required bool force}) async {
+    if (!AppConfig.enableEmailImportFeature) {
+      return 0;
+    }
     if (!hasPremiumFeatureAccess || settings.userId.isEmpty) {
       return 0;
     }

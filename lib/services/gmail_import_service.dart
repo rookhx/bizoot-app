@@ -671,8 +671,10 @@ class GmailImportService {
     return [
       'after:$afterDate',
       '-in:chats',
+      '-category:promotions',
+      '-category:social',
       '('
-          'receipt OR invoice OR billed OR payment OR subscription OR renewed OR renewal OR trial OR plan OR membership OR premium'
+          '"invoice" OR "receipt" OR "billing" OR "billed" OR "payment" OR "charged" OR "renewal" OR "auto-renew" OR "subscription" OR "membership" OR "purchase confirmation" OR "order confirmation"'
           ')',
     ].join(' ');
   }

@@ -52,6 +52,10 @@ class AppConfig {
     'BIZOOT_DEV_TOOLS',
     defaultValue: false,
   );
+  static const enableEmailImportFeature = bool.fromEnvironment(
+    'BIZOOT_EMAIL_IMPORT',
+    defaultValue: false,
+  );
 
   static bool get isFirebaseConfigured => true;
   static bool get isGoogleGmailOAuthConfigured =>
