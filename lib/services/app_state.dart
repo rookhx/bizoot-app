@@ -119,8 +119,10 @@ class AppState extends ChangeNotifier {
   String? subscriptionMessage;
   String? syncErrorMessage;
   DateTime? lastSyncedAt;
-  late UserProfile userProfile;
-  late UserSettings settings;
+  // Initialized with defaults so the UI can render (splash) before
+  // bootstrap() populates the real values; bootstrap overwrites both.
+  UserProfile userProfile = UserProfile.defaults();
+  UserSettings settings = UserSettings.defaults();
   NotificationPreferences notificationPreferences =
       NotificationPreferences.defaults();
   List<RecurringPayment> payments = [];
@@ -261,6 +263,7 @@ class AppState extends ChangeNotifier {
 
   Future<void> bootstrap() async {
     await notificationService.initialize();
+    try {
     final user = authService.currentUser;
     if (user != null) {
       isAuthenticated = true;
@@ -321,8 +324,12 @@ class AppState extends ChangeNotifier {
       notificationsAllowed = await notificationService
           .areNotificationsEnabled();
     }
-    isBootstrapping = false;
-    notifyListeners();
+    } catch (error) {
+      syncErrorMessage = 'Startup sync failed: $error';
+    } finally {
+      isBootstrapping = false;
+      notifyListeners();
+    }
   }
 
   Future<void> signIn(
@@ -462,7 +469,10 @@ class AppState extends ChangeNotifier {
     return raw;
   }
 
-  Future<void> deleteAccountPlaceholder() async {
+  Future<void> deleteAccount(String password) async {
+    // Verify the password before destroying anything: Firebase requires a
+    // recent login to delete a user, and failing first leaves data intact.
+    await authService.reauthenticate(password);
     final userId = settings.userId;
     await notificationService.cancelAll();
     await pushNotificationService.deleteTokenOnLogout(userId);
@@ -481,6 +491,7 @@ class AppState extends ChangeNotifier {
     customServices = const [];
     errorMessage = null;
     subscriptionMessage = null;
+    await authService.deleteAccount();
     await signOut();
   }
 

@@ -13,7 +13,7 @@ class AppConfig {
   static const googleGmailClientId = String.fromEnvironment(
     'GOOGLE_GMAIL_CLIENT_ID',
     defaultValue:
-        '311435914370-hnrnv3kt2rib7cqnfa69boiug9pf3idm.apps.googleusercontent.com',
+        '311435914370-1996867vn4g7o2s2qn8gvljoum8gg48t.apps.googleusercontent.com',
   );
   static const googleGmailServerClientId = String.fromEnvironment(
     'GOOGLE_GMAIL_SERVER_CLIENT_ID',
@@ -37,7 +37,7 @@ class AppConfig {
   );
   static const revenueCatIosApiKey = String.fromEnvironment(
     'REVENUECAT_IOS_API_KEY',
-    defaultValue: '',
+    defaultValue: 'appl_aWoymRBFsIaysyNPjTHesFVmIpZ',
   );
   static const revenueCatAndroidApiKey = String.fromEnvironment(
     'REVENUECAT_ANDROID_API_KEY',

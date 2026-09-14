@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "311435914370-1996867vn4g7o2s2qn8gvljoum8gg48t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.bizoot",
+            "certificate_hash": "7eb11ac47eed688fbf1ad41860447006e2d6d675"
+          }
+        },
+        {
           "client_id": "311435914370-hnrnv3kt2rib7cqnfa69boiug9pf3idm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

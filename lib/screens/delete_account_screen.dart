@@ -16,9 +16,17 @@ class DeleteAccountScreen extends StatefulWidget {
 }
 
 class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
+  final TextEditingController _passwordController = TextEditingController();
   bool _isDeleting = false;
 
+  @override
+  void dispose() {
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   Future<void> _confirmDelete(AppState appState) async {
+    _passwordController.clear();
     final confirmed =
         await showDialog<bool>(
           context: context,
@@ -32,14 +40,35 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
                 es: 'Eliminar la cuenta de Bizoot?',
               ),
             ),
-            content: Text(
-              localeText(
-                context,
-                en: 'This flow will delete your Bizoot data, clear cached device data, and sign you out.',
-                da: 'Denne handling sletter dine Bizoot-data, rydder cachede enhedsdata og logger dig ud.',
-                de: 'Dieser Vorgang loescht deine Bizoot-Daten, entfernt zwischengespeicherte Geraetedaten und meldet dich ab.',
-                es: 'Este proceso eliminara tus datos de Bizoot, borrara los datos en cache del dispositivo y cerrara tu sesion.',
-              ),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  localeText(
+                    context,
+                    en: 'This permanently deletes your Bizoot account and all of its data. It cannot be undone. Enter your password to confirm.',
+                    da: 'Dette sletter permanent din Bizoot-konto og alle dens data. Det kan ikke fortrydes. Indtast din adgangskode for at bekraefte.',
+                    de: 'Dies loescht dein Bizoot-Konto und alle zugehoerigen Daten dauerhaft. Es kann nicht rueckgaengig gemacht werden. Gib dein Passwort ein, um zu bestaetigen.',
+                    es: 'Esto elimina permanentemente tu cuenta de Bizoot y todos sus datos. No se puede deshacer. Introduce tu contrasena para confirmar.',
+                  ),
+                ),
+                const SizedBox(height: 16),
+                TextField(
+                  controller: _passwordController,
+                  obscureText: true,
+                  autofocus: true,
+                  decoration: InputDecoration(
+                    labelText: localeText(
+                      context,
+                      en: 'Password',
+                      da: 'Adgangskode',
+                      de: 'Passwort',
+                      es: 'Contrasena',
+                    ),
+                  ),
+                ),
+              ],
             ),
             actions: [
               TextButton(
@@ -72,36 +101,47 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
         false;
     if (!confirmed) return;
 
+    final password = _passwordController.text;
+    if (password.isEmpty) {
+      if (!mounted) return;
+      showErrorSnackBar(
+        context,
+        localeText(
+          context,
+          en: 'Enter your password to confirm deletion.',
+          da: 'Indtast din adgangskode for at bekraefte sletningen.',
+          de: 'Gib dein Passwort ein, um die Loeschung zu bestaetigen.',
+          es: 'Introduce tu contrasena para confirmar la eliminacion.',
+        ),
+      );
+      return;
+    }
+
     setState(() => _isDeleting = true);
     try {
-      await appState.deleteAccountPlaceholder();
+      await appState.deleteAccount(password);
       if (!mounted) return;
       AppHaptics.delete();
       showSuccessSnackBar(
         context,
         localeText(
           context,
-          en: 'Account data removed and signed out successfully.',
-          da: 'Kontodata blev fjernet, og du er nu logget ud.',
-          de: 'Kontodaten wurden entfernt und du wurdest erfolgreich abgemeldet.',
-          es: 'Los datos de la cuenta se eliminaron y la sesion se cerro correctamente.',
+          en: 'Your account and all of its data have been deleted.',
+          da: 'Din konto og alle dens data er blevet slettet.',
+          de: 'Dein Konto und alle zugehoerigen Daten wurden geloescht.',
+          es: 'Tu cuenta y todos sus datos se han eliminado.',
         ),
         icon: Icons.delete_forever_outlined,
       );
       Navigator.of(context).pop();
-    } catch (_) {
+    } catch (error) {
       if (!mounted) return;
       showErrorSnackBar(
         context,
-        localeText(
-          context,
-          en: 'We could not finish deleting your account right now.',
-          da: 'Vi kunne ikke fuldfoere sletningen af din konto lige nu.',
-          de: 'Wir konnten das Loeschen deines Kontos gerade nicht abschliessen.',
-          es: 'No pudimos completar la eliminacion de tu cuenta en este momento.',
-        ),
+        error.toString().replaceFirst('Exception: ', ''),
       );
     } finally {
+      _passwordController.clear();
       if (mounted) {
         setState(() => _isDeleting = false);
       }
@@ -154,10 +194,10 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
           ),
           body: localeText(
             context,
-            en: 'The current flow deletes your Bizoot data, cancels local notifications, clears cached payment state from this device, and signs you out safely.',
-            da: 'Den nuvaerende handling sletter dine Bizoot-data, annullerer lokale notifikationer, rydder cachede betalingsdata fra denne enhed og logger dig sikkert ud.',
-            de: 'Der aktuelle Ablauf loescht deine Bizoot-Daten, entfernt lokale Benachrichtigungen, leert zwischengespeicherte Zahlungsdaten auf diesem Geraet und meldet dich sicher ab.',
-            es: 'El flujo actual elimina tus datos de Bizoot, cancela las notificaciones locales, borra el estado de pagos en cache de este dispositivo y cierra tu sesion de forma segura.',
+            en: 'This permanently deletes your Bizoot account, removes your data, cancels local notifications, and clears cached payment state from this device. It cannot be undone.',
+            da: 'Dette sletter permanent din Bizoot-konto, fjerner dine data, annullerer lokale notifikationer og rydder cachede betalingsdata fra denne enhed. Det kan ikke fortrydes.',
+            de: 'Dies loescht dein Bizoot-Konto dauerhaft, entfernt deine Daten, bricht lokale Benachrichtigungen ab und leert zwischengespeicherte Zahlungsdaten auf diesem Geraet. Es kann nicht rueckgaengig gemacht werden.',
+            es: 'Esto elimina permanentemente tu cuenta de Bizoot, borra tus datos, cancela las notificaciones locales y limpia el estado de pagos en cache de este dispositivo. No se puede deshacer.',
           ),
         ),
         LegalSectionCard(
