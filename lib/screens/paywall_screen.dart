@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -187,18 +189,19 @@ class _PaywallScreenState extends State<PaywallScreen> {
                   spacing: 8,
                   runSpacing: 8,
                   children: [
-                    TextButton(
-                      onPressed: () => _openUrl(kEulaUrl),
-                      child: Text(
-                        localeText(
-                          context,
-                          en: 'Terms of Use (EULA)',
-                          da: 'Brugervilkår (EULA)',
-                          de: 'Nutzungsbedingungen (EULA)',
-                          es: 'Términos de uso (EULA)',
+                    if (Platform.isIOS)
+                      TextButton(
+                        onPressed: () => _openUrl(kEulaUrl),
+                        child: Text(
+                          localeText(
+                            context,
+                            en: 'Terms of Use (EULA)',
+                            da: 'Brugervilkår (EULA)',
+                            de: 'Nutzungsbedingungen (EULA)',
+                            es: 'Términos de uso (EULA)',
+                          ),
                         ),
                       ),
-                    ),
                     TextButton(
                       onPressed: () => _openUrl(kPrivacyPolicyUrl),
                       child: Text(
