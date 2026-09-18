@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../l10n/locale_text.dart';
-import '../screens/privacy_policy_screen.dart';
-import '../screens/terms_of_service_screen.dart';
 import '../services/app_state.dart';
 import '../theme/app_theme.dart';
 import '../utils/app_feedback.dart';
@@ -15,6 +14,10 @@ import '../widgets/gradient_card.dart';
 import '../widgets/gradient_text.dart';
 import '../widgets/neon_icon_box.dart';
 
+const String kEulaUrl =
+    'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/';
+const String kPrivacyPolicyUrl = 'https://bizoot.com/privacy-policy/';
+
 class PaywallScreen extends StatefulWidget {
   const PaywallScreen({super.key});
 
@@ -23,8 +26,23 @@ class PaywallScreen extends StatefulWidget {
 }
 
 class _PaywallScreenState extends State<PaywallScreen> {
-  void _openScreen(Widget screen) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (_) => screen));
+  Future<void> _openUrl(String url) async {
+    final launched = await launchUrl(
+      Uri.parse(url),
+      mode: LaunchMode.externalApplication,
+    );
+    if (!launched && mounted) {
+      showErrorSnackBar(
+        context,
+        localeText(
+          context,
+          en: 'Could not open the link.',
+          da: 'Linket kunne ikke åbnes.',
+          de: 'Der Link konnte nicht geöffnet werden.',
+          es: 'No se pudo abrir el enlace.',
+        ),
+      );
+    }
   }
 
   Future<void> _startPremiumCheckout(AppState appState) async {
@@ -170,27 +188,26 @@ class _PaywallScreenState extends State<PaywallScreen> {
                   runSpacing: 8,
                   children: [
                     TextButton(
-                      onPressed: () =>
-                          _openScreen(const TermsOfServiceScreen()),
+                      onPressed: () => _openUrl(kEulaUrl),
                       child: Text(
                         localeText(
                           context,
-                          en: 'Terms',
-                          da: 'Vilkår',
-                          de: 'AGB',
-                          es: 'Términos',
+                          en: 'Terms of Use (EULA)',
+                          da: 'Brugervilkår (EULA)',
+                          de: 'Nutzungsbedingungen (EULA)',
+                          es: 'Términos de uso (EULA)',
                         ),
                       ),
                     ),
                     TextButton(
-                      onPressed: () => _openScreen(const PrivacyPolicyScreen()),
+                      onPressed: () => _openUrl(kPrivacyPolicyUrl),
                       child: Text(
                         localeText(
                           context,
-                          en: 'Privacy',
-                          da: 'Privatliv',
-                          de: 'Datenschutz',
-                          es: 'Privacidad',
+                          en: 'Privacy Policy',
+                          da: 'Privatlivspolitik',
+                          de: 'Datenschutzrichtlinie',
+                          es: 'Política de privacidad',
                         ),
                       ),
                     ),
